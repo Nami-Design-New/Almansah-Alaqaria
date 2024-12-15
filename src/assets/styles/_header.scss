@@ -1,0 +1,35 @@
+header {
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: $white;
+  border-bottom: 1px solid $lightGray;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo img {
+      height: 40px;
+    }
+    .actions {
+      button {
+        background: $white;
+        border: 1px solid $lightGray;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px;
+        padding-inline-end: 12px;
+        border-radius: 32px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      img {
+        height: 28px;
+      }
+    }
+  }
+}
