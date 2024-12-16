@@ -14,8 +14,8 @@ import "./assets/styles/main.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <QueryClientProvider client={queryClient}>
+    <ReactQueryDevtools initialIsOpen={false} />
     <ToastContainer />
     <App />
-    <ReactQueryDevtools />
   </QueryClientProvider>
 );

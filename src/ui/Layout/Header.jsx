@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import UserDropDown from "./UserDropDown";
+import ThemeDropDown from "./ThemeDropDown";
+import LanguageDropDown from "./LanguageDropDown";
 
 export default function Header() {
   return (
@@ -9,10 +12,9 @@ export default function Header() {
         </Link>
 
         <div className="actions">
-          <button >
-            <img src="/images/icons/user.svg" alt="user_alt" />
-            حسابى
-          </button>
+          <ThemeDropDown />
+          <LanguageDropDown />
+          <UserDropDown />
         </div>
       </nav>
     </header>
