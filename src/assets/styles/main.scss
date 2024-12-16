@@ -1,9 +1,25 @@
 @import "./config";
 @import "./header";
+@import "./form_ui";
+@import "./not_found";
 
 body {
   direction: rtl;
+  background-color: var(--white);
   main {
     min-height: calc(100vh - 100px);
+  }
+
+  @import "./home";
+
+  &.en {
+    direction: ltr;
+    .form_field {
+      input,
+      select,
+      textarea {
+        direction: ltr;
+      }
+    }
   }
 }
