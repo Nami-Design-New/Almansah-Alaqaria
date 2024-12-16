@@ -32,5 +32,18 @@
   "bathrooms": "Number of Bathrooms",
   "sar": "SAR",
   "minPrice": "Min Price",
-  "maxPrice": "Max Price"
+  "maxPrice": "Max Price",
+  "destinations": "Most Requested Destinations",
+  "destinationsDesc": "A variety of destinations for a happy holiday...",
+  "viewAll": "View All",
+  "home": "Home",
+  "about": "About",
+  "ads": "Ads",
+  "add_ad": "Add Ad",
+  "contact": "Contact",
+  "page_not_found": {
+    "title": "Oops! 404",
+    "description": "We can&apos;t seem to find the page you&apos;re looking for.",
+    "button": "Back to Home"
+  }
 }

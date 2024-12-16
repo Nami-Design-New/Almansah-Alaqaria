@@ -16,6 +16,20 @@ header {
       height: 40px;
     }
 
+    .nav_links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--main);
+        &.active {
+          color: var(--second);
+        }
+      }
+    }
+
     .actions {
       gap: 16px;
       display: flex;
