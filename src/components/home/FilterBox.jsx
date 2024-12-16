@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { getResolvedTheme } from "../../redux/slices/themeSlice";
 import SelectField from "../../ui/form/SelectField";
 import SubmitBtn from "../../ui/form/SubmitBtn";
 import FilterModal from "../../ui/modals/FilterModal";
@@ -8,7 +9,18 @@ import FilterModal from "../../ui/modals/FilterModal";
 export default function FilterBox() {
   const { t } = useTranslation();
   const [showModal, setShowModal] = useState(false);
-  const { theme } = useSelector((state) => state.theme);
+  const theme = useSelector(getResolvedTheme);
+
+  const themeIcons = {
+    search: {
+      light: "/images/icons/search.svg",
+      dark: "/images/icons/search-dark.svg",
+    },
+    filter: {
+      light: "/images/icons/filter.svg",
+      dark: "/images/icons/filter-dark.svg",
+    },
+  };
 
   return (
     <div className="search_box">
@@ -40,14 +52,7 @@ export default function FilterBox() {
             { value: "house", label: "فيلا" },
           ]}
         />
-        <SubmitBtn
-          text={t("search")}
-          img={
-            theme === "light"
-              ? "/images/icons/search.svg"
-              : "/images/icons/search-dark.svg"
-          }
-        />
+        <SubmitBtn text={t("search")} img={themeIcons.search[theme]} />
         <button
           className="filter_btn"
           onClick={(e) => {
@@ -55,14 +60,7 @@ export default function FilterBox() {
             setShowModal(true);
           }}
         >
-          <img
-            src={
-              theme === "light"
-                ? "/images/icons/filter.svg"
-                : "/images/icons/filter-dark.svg"
-            }
-            alt="filter"
-          />
+          <img src={themeIcons.filter[theme]} alt="filter" />
         </button>
       </form>
       <FilterModal showModal={showModal} setShowModal={setShowModal} />

@@ -13,7 +13,7 @@ export default function Destinations() {
     <section className="destinations">
       <div className="container">
         <div className="row">
-          <div className="col-12 p-2 mb-5">
+          <div className="col-12 p-2 mb-4">
             <div className="header">
               <div className="section_title">
                 <h2>{t("destinations")}</h2>
@@ -54,7 +54,7 @@ export default function Destinations() {
               <SwiperSlide>
                 <Link to="/destinations">
                   <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
+                    <img src="images/d1.jpg" alt="destination" />
                     <div className="title">
                       <h3>الرياض</h3>
                       <p>75,432 شقة مطلة</p>
@@ -65,7 +65,7 @@ export default function Destinations() {
               <SwiperSlide>
                 <Link to="/destinations">
                   <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
+                    <img src="images/d1.jpg" alt="destination" />
                     <div className="title">
                       <h3>الرياض</h3>
                       <p>75,432 شقة مطلة</p>
@@ -76,7 +76,7 @@ export default function Destinations() {
               <SwiperSlide>
                 <Link to="/destinations">
                   <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
+                    <img src="images/d1.jpg" alt="destination" />
                     <div className="title">
                       <h3>الرياض</h3>
                       <p>75,432 شقة مطلة</p>
@@ -87,7 +87,7 @@ export default function Destinations() {
               <SwiperSlide>
                 <Link to="/destinations">
                   <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
+                    <img src="images/d1.jpg" alt="destination" />
                     <div className="title">
                       <h3>الرياض</h3>
                       <p>75,432 شقة مطلة</p>
@@ -98,7 +98,7 @@ export default function Destinations() {
               <SwiperSlide>
                 <Link to="/destinations">
                   <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
+                    <img src="images/d1.jpg" alt="destination" />
                     <div className="title">
                       <h3>الرياض</h3>
                       <p>75,432 شقة مطلة</p>
