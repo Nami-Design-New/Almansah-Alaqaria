@@ -1,22 +1,16 @@
 import { Dropdown } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setTheme } from "../../redux/slices/themeSlice";
+import { useTranslation } from "react-i18next";
 
 export default function ThemeDropDown() {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const { t } = useTranslation();
+  const dispatch = useDispatch();
+  const theme = useSelector((state) => state.theme.theme);
 
   const handleThemeChange = (selectedTheme) => {
-    setTheme(selectedTheme);
-    localStorage.setItem("theme", selectedTheme);
-
-    if (selectedTheme === "system") {
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        document.documentElement.setAttribute("data-theme", "dark");
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
-      }
-    } else {
-      document.documentElement.setAttribute("data-theme", selectedTheme);
-    }
+    dispatch(setTheme(selectedTheme));
   };
 
   useEffect(() => {
@@ -36,6 +30,7 @@ export default function ThemeDropDown() {
     return () => {
       mediaQuery.removeEventListener("change", handleSystemThemeChange);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme]);
 
   return (
@@ -54,13 +49,13 @@ export default function ThemeDropDown() {
 
       <Dropdown.Menu>
         <Dropdown.Item onClick={() => handleThemeChange("dark")}>
-          <i className="fa-regular fa-moon-stars"></i> الوضع الداكن
+          <i className="fa-regular fa-moon-stars"></i> {t("darkMode")}
         </Dropdown.Item>
         <Dropdown.Item onClick={() => handleThemeChange("light")}>
-          <i className="fa-regular fa-sun"></i> الوضع الفاتح
+          <i className="fa-regular fa-sun"></i> {t("lightMode")}
         </Dropdown.Item>
         <Dropdown.Item onClick={() => handleThemeChange("system")}>
-          <i className="fa-light fa-desktop"></i> الوضع المطلق
+          <i className="fa-regular fa-desktop"></i> {t("systemMode")}
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

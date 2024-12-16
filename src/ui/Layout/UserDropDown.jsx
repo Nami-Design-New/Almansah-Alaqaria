@@ -1,24 +1,26 @@
 import { Dropdown } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export default function UserDropDown() {
+  const { t } = useTranslation();
   return (
     <Dropdown>
       <Dropdown.Toggle className="user_btn">
         <img src="/images/icons/user.svg" alt="user_alt" />
-        حسابى
+        {t("myAccount")}
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
         <Dropdown.Item as={Link} to="/login">
-          تسجيل الدخول
+          {t("login")}
         </Dropdown.Item>
         <Dropdown.Item as={Link} to="/register">
-          إنشاء حساب
+          {t("register")}
         </Dropdown.Item>
         <span className="line" />
         <Dropdown.Item as={Link} to="/help">
-          المساعدة
+          {t("help")}
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

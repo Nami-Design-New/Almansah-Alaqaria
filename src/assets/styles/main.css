@@ -135,7 +135,7 @@ input[type=number]::-webkit-inner-spin-button {
 .dropdown-menu {
   border: 0 !important;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
-  margin-top: 16px !important;
+  margin-top: 14px !important;
   background: var(--dropdown-bg);
   border-radius: 8px;
   padding: 8px;
@@ -441,10 +441,142 @@ header nav .actions .rounded_btn.show {
   background: var(--btn-bg);
 }
 
+.form_field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  gap: 8px;
+  flex-wrap: wrap !important;
+}
+.form_field label {
+  color: var(--main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.form_field label svg,
+.form_field label i {
+  stroke: var(--main);
+  width: 16px;
+  height: 16px;
+}
+.form_field label img {
+  height: 24px;
+}
+.form_field label span {
+  font-size: 12px;
+  color: var(--input-hint);
+  width: 100%;
+}
+.form_field input,
+.form_field textarea,
+.form_field select {
+  color: var(--main);
+  direction: rtl;
+  height: 52px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: var(--input-bg);
+  border: 1px solid var(--input-stroke);
+  font-size: 14px;
+  box-shadow: none !important;
+}
+.form_field input::-moz-placeholder, .form_field textarea::-moz-placeholder, .form_field select::-moz-placeholder {
+  font-size: 14px;
+}
+.form_field input::placeholder,
+.form_field textarea::placeholder,
+.form_field select::placeholder {
+  font-size: 14px;
+}
+.form_field input:focus,
+.form_field textarea:focus,
+.form_field select:focus {
+  border-color: var(--input-stroke);
+}
+.form_field textarea {
+  height: 140px;
+  padding: 16px 12px;
+}
+.form_field .input-span {
+  position: absolute;
+  color: var(--main);
+  left: 12px;
+  top: 46px;
+}
+
+.form_submit {
+  padding: 0 42px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--main);
+  color: var(--white);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
 body {
   direction: rtl;
   background-color: var(--white);
 }
 body main {
   min-height: calc(100vh - 100px);
+}
+body .hero_section {
+  padding: 100px 0;
+  background: url("images/hero.jpg");
+  background-color: rgba(0, 0, 0, 0.4);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+body .hero_section h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 16px;
+}
+body .hero_section p {
+  width: min(100%, 500px);
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #fff;
+}
+body .hero_section .search_box {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--white);
+}
+body .hero_section .search_box .search_form {
+  display: flex;
+  gap: 12px;
+}
+body .hero_section .search_box .search_form .filter_btn {
+  height: 52px;
+  min-width: 52px;
+  border-radius: 12px;
+  border: 1px solid var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.en {
+  direction: ltr;
+}
+body.en .form_field input,
+body.en .form_field select,
+body.en .form_field textarea {
+  direction: ltr;
 }/*# sourceMappingURL=main.css.map */

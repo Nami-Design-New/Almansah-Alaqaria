@@ -1,0 +1,17 @@
+{
+  "darkMode": "الوضع الداكن",
+  "lightMode": "الوضع الفاتح",
+  "systemMode": "الوضع المطلق",
+  "myAccount": "حسابى",
+  "login": "تسجيل الدخول",
+  "register": "إنشاء حساب",
+  "help": "المساعدة",
+  "autoTranslation": "الترجمة التلقائية",
+  "english": "English",
+  "arabic": "العربية",
+  "searchForYourDreamHome": "ابحث عن منزلك المثالي",
+  "searchForYourDreamHomeDesc": "مع المنصة العقارية بتلقي العقار اللي تدور عليه بكل سهولة ويسر، وبتحقق أحلامك في السكن أو الاستثمار",
+  "city": "المدينة",
+  "propertyType": "نوع العقار",
+  "search": "بحث"
+}
