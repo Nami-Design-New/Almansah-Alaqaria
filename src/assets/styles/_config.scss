@@ -63,6 +63,7 @@
   --input-bg: #f8f8f8;
   --input-hint: #aaaaaa;
   --btn-bg: #f7f7f7;
+  --close-hover: #f2f2f2;
   --gray: #777777;
   --gray-light: #777777cc;
   --dropdown-bg: #fff;
@@ -84,6 +85,7 @@
   --input-hint: #666666;
   --dropdown-bg: #222222;
   --btn-bg: #222222;
+  --close-hover: #0d0d0f;
   --gray: #999999;
   --gray-light: #999999cc;
   --light-gray: #222222;
@@ -125,6 +127,25 @@ input[type="number"] {
   }
   appearance: textfield;
   -moz-appearance: textfield;
+}
+
+.rc-slider-mark {
+  @include space-between();
+  height: 24px;
+  margin: 0;
+  span {
+    font-size: 14px;
+    transform: none !important;
+    position: relative;
+    text-wrap: nowrap;
+    color: var(--main);
+    right: unset !important;
+    left: unset !important;
+  }
+}
+
+.rc-slider {
+  margin: 12px 8px 32px;
 }
 
 .form-check-input {
@@ -177,6 +198,7 @@ input[type="number"] {
     font-size: 14px;
     color: var(--main);
     display: flex;
+    margin-bottom: 2px;
     align-items: center;
     gap: 8px;
     &:active {
@@ -202,15 +224,34 @@ input[type="number"] {
 .modal-header {
   border-bottom: 0;
   .btn-close {
+    padding: 0 !important;
+    background: none !important;
     box-shadow: none !important;
-    background-image: url("/images/icons/close.svg");
-    margin-inline-start: auto !important;
     margin-inline-end: 0 !important;
+    margin-inline-start: auto !important;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    position: relative;
+    opacity: 1;
+    &::before {
+      @include centerAbsolute();
+      font-family: "Font Awesome 6 Pro";
+      content: "\f00d";
+      font-size: 14px;
+      color: var(--main);
+    }
+    &:hover {
+      background: var(--close-hover) !important;
+    }
   }
   h6 {
     color: var(--main);
     margin-bottom: 0;
   }
+}
+.modal-content {
+  background: var(--white);
 }
 
 .modal .modal-xl {

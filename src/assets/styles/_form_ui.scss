@@ -43,8 +43,11 @@
     box-shadow: none !important;
     &::placeholder {
       font-size: 14px;
+      color: var(--input-hint);
     }
     &:focus {
+      color: var(--main);
+      background: var(--input-bg);
       border-color: var(--input-stroke);
     }
   }

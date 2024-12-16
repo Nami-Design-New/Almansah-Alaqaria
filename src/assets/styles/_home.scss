@@ -38,3 +38,116 @@
     }
   }
 }
+
+.filter_modal {
+  padding: 0;
+  .row {
+    padding: 1rem;
+    max-height: 70vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .filter_field {
+    gap: 12px;
+    display: flex;
+    padding: 20px 0;
+    flex-direction: column;
+    border-bottom: 1px solid var(--input-stroke);
+    &:last-child {
+      border-bottom: none;
+    }
+    .head {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 4px;
+      @include space-between();
+      h6 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--main);
+      }
+      button {
+        font-size: 14px;
+        text-decoration: underline;
+        color: var(--main);
+        padding: 0 4px;
+        font-weight: 600;
+      }
+    }
+    .body {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      .checkbox_field {
+        div {
+          padding: 8px 28px;
+          cursor: pointer;
+          @include centerFlex();
+          gap: 4px;
+          transition: var(--transition);
+          border-radius: 8px;
+          color: var(--main);
+          border: 1px solid var(--input-stroke);
+        }
+        input {
+          display: none;
+          &:checked + div {
+            background: var(--main);
+            color: var(--white);
+          }
+        }
+      }
+      .counter_field {
+        width: 100%;
+        margin-bottom: 8px;
+        @include space-between();
+        h6 {
+          font-size: 14px;
+          color: var(--main);
+        }
+        .counter_input {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          button {
+            height: 30px;
+            width: 30px;
+            border-radius: 6px;
+            font-size: 14px;
+            @include centerFlex();
+            color: var(--main);
+            background: var(--close-hover);
+          }
+          span {
+            font-size: 14px;
+            color: var(--main);
+          }
+        }
+      }
+    }
+  }
+
+  .filter_footer {
+    padding: 1rem;
+    border-top: 1px solid var(--input-stroke);
+    @include space-between();
+    .clearAll {
+      color: var(--main);
+    }
+    .submit_btn {
+      background: var(--second);
+      color: #fff;
+      padding: 0 32px;
+      height: 48px;
+      border-radius: 12px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+}
