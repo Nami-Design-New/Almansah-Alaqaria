@@ -9,7 +9,7 @@ export default function PageNotFound() {
         <div className="row">
           <div className="col-12 p-2">
             <div className="error_container">
-              <img src="images/icons/error.svg" alt="not found" />
+              <img src="/icons/error.svg" alt="not found" />
               <h1>{t("page_not_found.title")}</h1>
               <p>{t("page_not_found.description")}</p>
               <Link to="/">{t("page_not_found.button")}</Link>

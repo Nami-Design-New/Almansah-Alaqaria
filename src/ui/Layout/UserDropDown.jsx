@@ -7,7 +7,7 @@ export default function UserDropDown() {
   return (
     <Dropdown>
       <Dropdown.Toggle className="user_btn">
-        <img src="/images/icons/user.svg" alt="user_alt" />
+        <img src="/icons/user.svg" alt="user_alt" />
         {t("myAccount")}
       </Dropdown.Toggle>
 

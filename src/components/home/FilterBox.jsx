@@ -13,12 +13,12 @@ export default function FilterBox() {
 
   const themeIcons = {
     search: {
-      light: "/images/icons/search.svg",
-      dark: "/images/icons/search-dark.svg",
+      light: "/icons/search.svg",
+      dark: "/icons/search-dark.svg",
     },
     filter: {
-      light: "/images/icons/filter.svg",
-      dark: "/images/icons/filter-dark.svg",
+      light: "/icons/filter.svg",
+      dark: "/icons/filter-dark.svg",
     },
   };
 

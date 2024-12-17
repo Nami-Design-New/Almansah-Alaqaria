@@ -133,7 +133,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .form-check-input:checked {
   background-position: right center;
-  background-image: url("/images/icons/check-checked-icon.svg");
+  background-image: url("/icons/check-checked-icon.svg");
   border-color: var(--main);
 }
 
