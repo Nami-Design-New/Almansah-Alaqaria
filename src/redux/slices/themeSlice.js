@@ -24,5 +24,14 @@ const themeSlice = createSlice({
   },
 });
 
+export const getResolvedTheme = (state) => {
+  if (state.theme.theme === "system") {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  }
+  return state.theme.theme;
+};
+
 export const { setTheme } = themeSlice.actions;
 export default themeSlice.reducer;

@@ -19,10 +19,9 @@ header {
     .nav_links {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 42px;
       a {
         font-size: 16px;
-        font-weight: 500;
         color: var(--main);
         &.active {
           color: var(--second);

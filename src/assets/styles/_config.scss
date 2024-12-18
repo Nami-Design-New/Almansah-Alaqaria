@@ -94,6 +94,12 @@
   --border-radius: 12px;
   --transition: 0.3s ease-in-out;
   --shadow: 0px 2px 8px #00000040;
+  .to_white {
+    filter: brightness(0);
+  }
+  .to_dark{
+    filter: brightness(0) invert(1);
+  }
 }
 
 button,
@@ -154,7 +160,7 @@ input[type="number"] {
   }
   &:checked {
     background-position: right center;
-    background-image: url("/images/icons/check-checked-icon.svg");
+    background-image: url("/icons/check-checked-icon.svg");
     border-color: var(--main);
   }
 }

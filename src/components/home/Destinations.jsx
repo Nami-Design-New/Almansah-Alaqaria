@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Autoplay, Navigation } from "swiper/modules";
 import { useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
+import DestinationCard from "../../ui/cards/DestinationCard";
 import "swiper/css";
 
 export default function Destinations() {
@@ -13,8 +14,8 @@ export default function Destinations() {
     <section className="destinations">
       <div className="container">
         <div className="row">
-          <div className="col-12 p-2 mb-5">
-            <div className="header">
+          <div className="col-12 p-2 mb-4">
+            <div className="sec_header">
               <div className="section_title">
                 <h2>{t("destinations")}</h2>
                 <p>{t("destinationsDesc")}</p>
@@ -52,59 +53,19 @@ export default function Destinations() {
               }}
             >
               <SwiperSlide>
-                <Link to="/destinations">
-                  <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
-                    <div className="title">
-                      <h3>الرياض</h3>
-                      <p>75,432 شقة مطلة</p>
-                    </div>
-                  </div>
-                </Link>
+                <DestinationCard />
               </SwiperSlide>
               <SwiperSlide>
-                <Link to="/destinations">
-                  <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
-                    <div className="title">
-                      <h3>الرياض</h3>
-                      <p>75,432 شقة مطلة</p>
-                    </div>
-                  </div>
-                </Link>
+                <DestinationCard />
               </SwiperSlide>
               <SwiperSlide>
-                <Link to="/destinations">
-                  <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
-                    <div className="title">
-                      <h3>الرياض</h3>
-                      <p>75,432 شقة مطلة</p>
-                    </div>
-                  </div>
-                </Link>
+                <DestinationCard />
               </SwiperSlide>
               <SwiperSlide>
-                <Link to="/destinations">
-                  <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
-                    <div className="title">
-                      <h3>الرياض</h3>
-                      <p>75,432 شقة مطلة</p>
-                    </div>
-                  </div>
-                </Link>
+                <DestinationCard />
               </SwiperSlide>
               <SwiperSlide>
-                <Link to="/destinations">
-                  <div className="img">
-                    <img src="/public/images/d1.jpg" alt="destination" />
-                    <div className="title">
-                      <h3>الرياض</h3>
-                      <p>75,432 شقة مطلة</p>
-                    </div>
-                  </div>
-                </Link>
+                <DestinationCard />
               </SwiperSlide>
             </Swiper>
           </div>

@@ -1,13 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
+import { getResolvedTheme } from "../../redux/slices/themeSlice";
 import UserDropDown from "./UserDropDown";
 import ThemeDropDown from "./ThemeDropDown";
 import LanguageDropDown from "./LanguageDropDown";
 
 export default function Header() {
   const { t } = useTranslation();
-  const { theme } = useSelector((state) => state.theme);
+  const resolvedTheme = useSelector(getResolvedTheme);
 
   return (
     <header>
@@ -15,7 +16,9 @@ export default function Header() {
         <Link to="/" className="logo">
           <img
             src={
-              theme === "light" ? "/images/logo.svg" : "/images/logo-dark.svg"
+              resolvedTheme === "light"
+                ? "/images/logo.svg"
+                : "/images/logo-dark.svg"
             }
             alt="logo"
           />
