@@ -41,8 +41,9 @@
   "ads": "Ads",
   "add_ad": "Add Ad",
   "contact": "Contact",
-  "propertiesTitle":"Featured Units for Rent",
-  "propertiesDesc":"The most highly rated units...",
+  "propertiesTitle": "Featured Units for Rent",
+  "propertiesDesc": "The most highly rated units...",
+  "night": "night",
   "page_not_found": {
     "title": "Oops! 404",
     "description": "We can't seem to find the page you're looking for.",

@@ -1,7 +1,7 @@
 {
   "darkMode": "الوضع الداكن",
   "lightMode": "الوضع الفاتح",
-  "systemMode": "الوضع المطلق",
+  "systemMode": "الوضع التلقائى",
   "myAccount": "حسابى",
   "login": "تسجيل الدخول",
   "register": "إنشاء حساب",
@@ -43,6 +43,7 @@
   "contact": "التواصل",
   "propertiesTitle":"وحدات مميزة للإيجار",
   "propertiesDesc":"ابرز الوحدات التي حصلت علي اعلي تقييمات...",
+  "night": "الليلة",
   "page_not_found": {
     "title": "Oops! 404",
     "description": "عذراً، لا يمكننا العثور على الصفحة التي تبحث عنها.",

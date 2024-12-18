@@ -196,7 +196,7 @@ input[type=number]::-webkit-inner-spin-button {
 .container {
   padding: 0;
   max-width: unset;
-  width: min(100% - 24px, 1760px);
+  width: min(100% - 24px, 1400px);
 }
 
 .dropdown-toggle::after {
@@ -505,7 +505,7 @@ header nav .actions .rounded_btn.show {
 }
 
 .unit_card {
-  background: var(--close-hover);
+  background: var(--white);
   border-radius: 16px;
   overflow: hidden;
   display: flex;
@@ -525,9 +525,57 @@ header nav .actions .rounded_btn.show {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.unit_card .images .swiper-button-prev,
+.unit_card .images .swiper-button-next {
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  margin: 0;
+  background: #fff;
+  border-radius: 50%;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.unit_card .images .swiper-button-prev::after,
+.unit_card .images .swiper-button-next::after {
+  font-size: 16px;
+  font-family: "Font Awesome 6 Pro";
+  content: "\f105";
+  color: #000;
+}
+.unit_card .images .swiper-button-prev.swiper-button-disabled,
+.unit_card .images .swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+.unit_card .images .swiper-button-prev::after {
+  content: "\f104";
+}
+.unit_card .images .swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  opacity: 0;
+  transition: var(--transition);
+}
+.unit_card .images .swiper-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  background: #fff;
+  opacity: 0.7;
+}
+.unit_card .images .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+}
 .unit_card .content {
   padding: 16px;
-  gap: 8px;
+  gap: 14px;
   display: flex;
   flex-direction: column;
 }
@@ -567,6 +615,24 @@ header nav .actions .rounded_btn.show {
 .unit_card .content p {
   margin: 0;
   color: var(--gray);
+}
+.unit_card .content .price {
+  color: var(--main);
+  margin: 0;
+}
+.unit_card .content .price b {
+  font-size: 20px;
+}
+.unit_card .content .price span {
+  font-size: 14px;
+  color: var(--gray);
+}
+.unit_card:hover .images .swiper-button-prev,
+.unit_card:hover .images .swiper-button-next {
+  opacity: 1;
+}
+.unit_card:hover .images .swiper-pagination {
+  opacity: 1;
 }
 
 .form_field {
@@ -909,6 +975,10 @@ body .sec_header a {
   font-size: 14px;
   color: var(--main);
   text-decoration: underline;
+}
+body .featured_properties {
+  background: var(--btn-bg);
+  padding: 60px 0;
 }
 body.en {
   direction: ltr;
