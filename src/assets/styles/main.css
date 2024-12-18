@@ -504,6 +504,118 @@ header nav .actions .rounded_btn.show {
   background: var(--btn-bg);
 }
 
+footer {
+  padding: 40px 0 0;
+}
+footer .footer_header {
+  width: 100%;
+  padding: 24px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--input-stroke);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+footer .footer_header .logo img {
+  height: 50px;
+}
+footer .footer_header .follow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+footer .footer_header .follow h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--main);
+}
+footer .footer_header .follow .social_media {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+footer .footer_header .follow .social_media a {
+  color: var(--main);
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  background: var(--close-hover);
+  transition: var(--transition);
+}
+footer .footer_header .follow .social_media a:hover {
+  color: var(--white);
+  background: var(--main);
+}
+footer .col {
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+footer .col h5 {
+  font-size: 16px;
+  color: var(--main);
+}
+footer .col p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--gray);
+}
+footer .col form {
+  width: 100%;
+  border-radius: 8px;
+  background: var(--input-bg);
+  display: flex;
+  padding: 12px 24px;
+  align-items: center;
+}
+footer .col form input {
+  width: 100%;
+  color: var(--main);
+}
+footer .col form button {
+  color: var(--main);
+  transition: var(--transition);
+}
+footer .col form button:hover {
+  color: var(--second);
+}
+footer .copy_rights {
+  padding: 28px 0 20px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--input-stroke);
+}
+footer .copy_rights p {
+  color: var(--main);
+  margin: 0;
+}
+footer .copy_rights p a {
+  color: var(--main);
+  transition: var(--transition);
+}
+footer .copy_rights p a:hover {
+  color: var(--second);
+}
+footer .copy_rights .links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+footer .copy_rights .links a {
+  color: var(--main);
+  transition: var(--transition);
+}
+footer .copy_rights .links a:hover {
+  color: var(--second);
+}
+
 .unit_card {
   background: var(--white);
   border-radius: 16px;
@@ -559,13 +671,12 @@ header nav .actions .rounded_btn.show {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0px;
   opacity: 0;
   transition: var(--transition);
 }
 .unit_card .images .swiper-pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: transparent;
   background: #fff;
   opacity: 0.7;

@@ -1,0 +1,107 @@
+footer {
+  padding: 40px 0 0;
+  .footer_header {
+    width: 100%;
+    padding: 24px 0;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--input-stroke);
+    @include space-between();
+    align-items: flex-end;
+    .logo img {
+      height: 50px;
+    }
+    .follow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      h3 {
+        margin: 0;
+        font-size: 16px;
+        color: var(--main);
+      }
+      .social_media {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        a {
+          color: var(--main);
+          width: 34px;
+          height: 34px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          font-size: 14px;
+          background: var(--close-hover);
+          transition: var(--transition);
+          &:hover {
+            color: var(--white);
+            background: var(--main);
+          }
+        }
+      }
+    }
+  }
+  .col {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    h5 {
+      font-size: 16px;
+      color: var(--main);
+    }
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--gray);
+    }
+    form {
+      width: 100%;
+      border-radius: 8px;
+      background: var(--input-bg);
+      display: flex;
+      padding: 12px 24px;
+      align-items: center;
+      input {
+        width: 100%;
+        color: var(--main);
+      }
+      button {
+        color: var(--main);
+        transition: var(--transition);
+        &:hover {
+          color: var(--second);
+        }
+      }
+    }
+  }
+  .copy_rights {
+    padding: 28px 0 20px;
+    margin-top: 16px;
+    @include space-between();
+    border-top: 1px solid var(--input-stroke);
+    p {
+      color: var(--main);
+      margin: 0;
+      a {
+        color: var(--main);
+        transition: var(--transition);
+        &:hover {
+          color: var(--second);
+        }
+      }
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      a {
+        color: var(--main);
+        transition: var(--transition);
+        &:hover {
+          color: var(--second);
+        }
+      }
+    }
+  }
+}
