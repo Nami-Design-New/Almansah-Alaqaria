@@ -16,10 +16,10 @@ export default function Properties() {
             <Link to="/destinations">{t("viewAll")}</Link>
           </div>
         </div>
-        {Array(4)
+        {Array(10)
           .fill()
           .map((_, i) => (
-            <div key={i} className="col-lg-3 col-md-6 col-12 p-2">
+            <div key={i} className="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-12 p-2">
               <PropertyCard />
             </div>
           ))}

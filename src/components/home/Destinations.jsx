@@ -50,8 +50,20 @@ export default function Destinations() {
                 1024: {
                   slidesPerView: 4,
                 },
+                1400: {
+                  slidesPerView: 5,
+                },
+                1600: {
+                  slidesPerView: 6,
+                },
               }}
             >
+              <SwiperSlide>
+                <DestinationCard />
+              </SwiperSlide>
+              <SwiperSlide>
+                <DestinationCard />
+              </SwiperSlide>
               <SwiperSlide>
                 <DestinationCard />
               </SwiperSlide>
