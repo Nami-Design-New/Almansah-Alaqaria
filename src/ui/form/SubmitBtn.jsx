@@ -10,7 +10,7 @@ export default function SubmitBtn({ className, text, img, loading = false }) {
         <i className="fa-duotone fa-regular fa-circle-notch fa-spin"></i>
       ) : (
         <>
-          {img && <img src={img} alt={text} />}
+          {img && <img className="to_white" src={img} alt={text} />}
           {text}
         </>
       )}

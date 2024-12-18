@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-import { getResolvedTheme } from "../../redux/slices/themeSlice";
 import SelectField from "../../ui/form/SelectField";
 import SubmitBtn from "../../ui/form/SubmitBtn";
 import FilterModal from "../../ui/modals/FilterModal";
@@ -9,19 +7,6 @@ import FilterModal from "../../ui/modals/FilterModal";
 export default function FilterBox() {
   const { t } = useTranslation();
   const [showModal, setShowModal] = useState(false);
-  const theme = useSelector(getResolvedTheme);
-
-  const themeIcons = {
-    search: {
-      light: "/icons/search.svg",
-      dark: "/icons/search-dark.svg",
-    },
-    filter: {
-      light: "/icons/filter.svg",
-      dark: "/icons/filter-dark.svg",
-    },
-  };
-
   return (
     <div className="search_box">
       <form className="search_form">
@@ -52,7 +37,7 @@ export default function FilterBox() {
             { value: "house", label: "فيلا" },
           ]}
         />
-        <SubmitBtn text={t("search")} img={themeIcons.search[theme]} />
+        <SubmitBtn text={t("search")} img="/icons/search.svg" />
         <button
           className="filter_btn"
           onClick={(e) => {
@@ -60,7 +45,7 @@ export default function FilterBox() {
             setShowModal(true);
           }}
         >
-          <img src={themeIcons.filter[theme]} alt="filter" />
+          <img src="/icons/filter.svg" className="to_dark" alt="filter" />
         </button>
       </form>
       <FilterModal showModal={showModal} setShowModal={setShowModal} />

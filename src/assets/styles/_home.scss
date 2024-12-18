@@ -154,68 +154,70 @@
 
 .destinations {
   padding: 60px 0;
-  .header {
-    @include space-between();
-    align-items: flex-end;
-    .section_title {
-      h2 {
-        font-size: 24px;
-        color: var(--main);
+  .destinations_swiper {
+    .swiper-slide {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      .img {
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .title {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 43.5%,
+            #000000 87.5%
+          );
+          h3 {
+            font-size: 16px;
+            color: #fff;
+          }
+          p {
+            font-size: 14px;
+            color: #fff;
+            margin: 0;
+          }
+        }
       }
-      p {
-        font-size: 14px;
-        margin: 0;
-        color: var(--gray);
-      }
-    }
-    a {
-      font-size: 14px;
-      color: var(--main);
-      text-decoration: underline;
     }
   }
 }
 
-.destinations_swiper {
-  .swiper-slide {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    .img {
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        padding: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0) 43.5%,
-          #000000 87.5%
-        );
-        h3 {
-          font-size: 16px;
-          color: #fff;
-        }
-        p {
-          font-size: 14px;
-          color: #fff;
-          margin: 0;
-        }
-      }
+.sec_header {
+  @include space-between();
+  align-items: flex-end;
+  .section_title {
+    h2 {
+      font-size: 24px;
+      color: var(--main);
+    }
+    p {
+      font-size: 14px;
+      margin: 0;
+      color: var(--gray);
     }
   }
+  a {
+    font-size: 14px;
+    color: var(--main);
+    text-decoration: underline;
+  }
 }
+
+
