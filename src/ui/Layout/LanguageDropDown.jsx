@@ -10,7 +10,7 @@ export default function LanguageDropDown() {
 
   const handleLanguageChange = (selectedLanguage) => {
     dispatch(setLanguage(selectedLanguage));
-    sessionStorage.setItem("lang", selectedLanguage);
+    localStorage.setItem("lang", selectedLanguage);
     i18next.changeLanguage(selectedLanguage);
     const bodyElement = document.querySelector("body");
     if (bodyElement) {

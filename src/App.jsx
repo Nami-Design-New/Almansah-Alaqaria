@@ -8,7 +8,7 @@ export default function App() {
   const { lang } = useSelector((state) => state.language);
 
   useEffect(() => {
-    sessionStorage.setItem("lang", lang);
+    localStorage.setItem("lang", lang);
     const body = document.querySelector("body");
     lang === "en" ? body.classList.add("en") : body.classList.remove("en");
     i18n.changeLanguage(lang);
