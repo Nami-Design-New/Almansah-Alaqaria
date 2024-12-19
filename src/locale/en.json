@@ -63,9 +63,25 @@
   "cancellationPolicy": "Cancellation Policy",
   "support": "Support and Help",
   "faqs": "FAQs",
+  "whyTitle": "Why Choose Almansah Alaqaria?",
+  "whyDesc": "Let us help you find the experience you're looking for!",
   "page_not_found": {
     "title": "Oops! 404",
     "description": "We can't seem to find the page you're looking for.",
     "button": "Back to Home"
+  },
+  "features": {
+    "title1": "Instant Booking",
+    "description1": "Your booking is guaranteed 100%",
+    "title2": "Secure payment methods",
+    "description2": "Multiple and secure payment methods",
+    "title3": "Customer Service",
+    "description3": "We support you around the week",
+    "title4": "Trusted Reviews",
+    "description4": "Trusted reviews and comments",
+    "title5": "Smart Search",
+    "description5": "All types of search in one place",
+    "title6": "Photos & Videos",
+    "description6": "See what your home looks like"
   }
 }

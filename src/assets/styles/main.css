@@ -511,9 +511,6 @@ header nav .actions .rounded_btn.show {
   background: var(--btn-bg);
 }
 
-footer {
-  padding: 40px 0 0;
-}
 footer .footer_header {
   width: 100%;
   padding: 24px 0;
@@ -1112,6 +1109,66 @@ body .sec_header a {
 body .featured_properties {
   background: var(--btn-bg);
   padding: 60px 0;
+}
+body .why_us {
+  display: flex;
+}
+body .why_us .img {
+  flex: 1;
+  aspect-ratio: 3/2;
+  background: var(--btn-bg);
+}
+body .why_us .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .why_us .content {
+  flex: 1;
+  gap: 8px;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body .why_us .content h3 {
+  font-size: 24px;
+  color: var(--main);
+}
+body .why_us .content p {
+  color: var(--gray);
+}
+body .why_us .content .features {
+  gap: 16px;
+  display: grid;
+  margin-top: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+body .why_us .content .feature_card {
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--btn-bg);
+}
+body .why_us .content .feature_card img {
+  height: 36px;
+}
+body .why_us .content .feature_card h4 {
+  font-size: 16px;
+  color: var(--main);
+}
+body .why_us .content .feature_card p {
+  font-size: 14px;
+  margin: 0;
+}
+body .download_app {
+  padding: 60px 0;
+  background: var(--btn-bg);
 }
 body.en {
   direction: ltr;
