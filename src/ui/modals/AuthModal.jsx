@@ -17,9 +17,14 @@ export default function AuthModal() {
       centered
       size="lg"
       show={show}
+      backdrop="static"
       onHide={() => dispatch(setShowAuthModal(false))}
     >
       <Modal.Body className="auth_modal">
+        <div
+          className="modal_close_btn"
+          onClick={() => dispatch(setShowAuthModal(false))}
+        />
         <div className="auth_img">
           <img src="/images/auth.jpg" alt="" />
         </div>

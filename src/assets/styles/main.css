@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -901,6 +902,7 @@ footer .copy_rights .links a:hover {
 
 body {
   direction: rtl;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
   background-color: var(--white);
 }
 body main {
@@ -1195,6 +1197,7 @@ body .download_app {
 body .auth_modal {
   display: flex;
   padding: 0;
+  position: relative;
 }
 body .auth_modal .auth_img {
   flex: 1;
@@ -1217,7 +1220,7 @@ body .auth_modal .auth_img .img_overlay {
 body .auth_modal .auth_form {
   flex: 1;
   display: flex;
-  padding: 32px;
+  padding: 64px 32px 32px;
   gap: 24px;
   justify-content: space-between;
   flex-direction: column;
@@ -1237,7 +1240,6 @@ body .auth_modal .auth_form button {
   background: var(--main);
   color: var(--white);
   border-radius: 12px;
-  font-weight: 600;
   border: 1px solid transparent;
   font-size: 14px;
   display: flex;
@@ -1288,8 +1290,37 @@ body .auth_modal .auth_form .social_login .agreeToPrivacy {
 body .auth_modal .auth_form .social_login .agreeToPrivacy a {
   color: var(--main);
 }
+body .auth_modal .modal_close_btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  margin-inline-end: 0 !important;
+  margin-inline-start: auto !important;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  opacity: 1;
+  cursor: pointer;
+}
+body .auth_modal .modal_close_btn::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 6 Pro";
+  content: "\f00d";
+  font-size: 14px;
+  color: var(--main);
+}
+body .auth_modal .modal_close_btn:hover {
+  background: var(--close-hover) !important;
+}
 body.en {
   direction: ltr;
+  font-family: "Outfit", sans-serif;
 }
 body.en .form_field input,
 body.en .form_field select,
