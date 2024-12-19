@@ -448,12 +448,17 @@ header nav {
   align-items: center;
   justify-content: space-between;
 }
+header nav .logo {
+  flex: 1;
+}
 header nav .logo img {
   height: 40px;
 }
 header nav .nav_links {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex: 2;
   gap: 42px;
 }
 header nav .nav_links a {
@@ -466,6 +471,8 @@ header nav .nav_links a.active {
 header nav .actions {
   gap: 16px;
   display: flex;
+  flex: 1;
+  justify-content: flex-end;
   align-items: center;
 }
 header nav .actions .user_btn {
@@ -565,6 +572,19 @@ footer .col p {
   font-size: 14px;
   color: var(--gray);
 }
+footer .col .links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .col .links a {
+  color: var(--gray);
+  font-size: 14px;
+  transition: var(--transition);
+}
+footer .col .links a:hover {
+  color: var(--main);
+}
 footer .col form {
   width: 100%;
   border-radius: 8px;
@@ -594,6 +614,7 @@ footer .copy_rights {
 }
 footer .copy_rights p {
   color: var(--main);
+  font-size: 14px;
   margin: 0;
 }
 footer .copy_rights p a {
@@ -610,6 +631,7 @@ footer .copy_rights .links {
 }
 footer .copy_rights .links a {
   color: var(--main);
+  font-size: 14px;
   transition: var(--transition);
 }
 footer .copy_rights .links a:hover {
