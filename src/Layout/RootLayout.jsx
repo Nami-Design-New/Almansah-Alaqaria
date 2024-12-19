@@ -1,7 +1,8 @@
 import { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../ui/Header";
+import Footer from "./../ui/Footer";
+import AuthModal from "../ui/modals/AuthModal";
 
 export default function RootLayout() {
   return (
@@ -11,6 +12,7 @@ export default function RootLayout() {
         <Outlet />
       </main>
       <Footer />
+      <AuthModal />
     </Fragment>
   );
 }

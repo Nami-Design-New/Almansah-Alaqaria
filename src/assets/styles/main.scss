@@ -13,6 +13,7 @@ body {
   }
 
   @import "./home";
+  @import "./auth";
 
   &.en {
     direction: ltr;

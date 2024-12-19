@@ -1,10 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-import { getResolvedTheme } from "../../redux/slices/themeSlice";
-import UserDropDown from "./UserDropDown";
-import ThemeDropDown from "./ThemeDropDown";
-import LanguageDropDown from "./LanguageDropDown";
+import { getResolvedTheme } from "../redux/slices/themeSlice";
+import ThemeDropDown from "./header/ThemeDropDown";
+import LanguageDropDown from "./header/LanguageDropDown";
+import UserDropDown from "./header/UserDropDown";
 
 export default function Header() {
   const { t } = useTranslation();

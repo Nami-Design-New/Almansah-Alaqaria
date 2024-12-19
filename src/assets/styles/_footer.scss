@@ -1,5 +1,4 @@
 footer {
-  padding: 40px 0 0;
   .footer_header {
     width: 100%;
     padding: 24px 0;
@@ -55,6 +54,19 @@ footer {
       font-size: 14px;
       color: var(--gray);
     }
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      a {
+        color: var(--gray);
+        font-size: 14px;
+        transition: var(--transition);
+        &:hover {
+          color: var(--main);
+        }
+      }
+    }
     form {
       width: 100%;
       border-radius: 8px;
@@ -82,6 +94,7 @@ footer {
     border-top: 1px solid var(--input-stroke);
     p {
       color: var(--main);
+      font-size: 14px;
       margin: 0;
       a {
         color: var(--main);
@@ -97,6 +110,7 @@ footer {
       gap: 16px;
       a {
         color: var(--main);
+        font-size: 14px;
         transition: var(--transition);
         &:hover {
           color: var(--second);

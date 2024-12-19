@@ -238,6 +238,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 .modal-content {
   background: var(--white);
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .modal .modal-xl {
@@ -448,12 +450,17 @@ header nav {
   align-items: center;
   justify-content: space-between;
 }
+header nav .logo {
+  flex: 1;
+}
 header nav .logo img {
   height: 40px;
 }
 header nav .nav_links {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex: 2;
   gap: 42px;
 }
 header nav .nav_links a {
@@ -466,6 +473,8 @@ header nav .nav_links a.active {
 header nav .actions {
   gap: 16px;
   display: flex;
+  flex: 1;
+  justify-content: flex-end;
   align-items: center;
 }
 header nav .actions .user_btn {
@@ -504,9 +513,6 @@ header nav .actions .rounded_btn.show {
   background: var(--btn-bg);
 }
 
-footer {
-  padding: 40px 0 0;
-}
 footer .footer_header {
   width: 100%;
   padding: 24px 0;
@@ -565,6 +571,19 @@ footer .col p {
   font-size: 14px;
   color: var(--gray);
 }
+footer .col .links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .col .links a {
+  color: var(--gray);
+  font-size: 14px;
+  transition: var(--transition);
+}
+footer .col .links a:hover {
+  color: var(--main);
+}
 footer .col form {
   width: 100%;
   border-radius: 8px;
@@ -594,6 +613,7 @@ footer .copy_rights {
 }
 footer .copy_rights p {
   color: var(--main);
+  font-size: 14px;
   margin: 0;
 }
 footer .copy_rights p a {
@@ -610,6 +630,7 @@ footer .copy_rights .links {
 }
 footer .copy_rights .links a {
   color: var(--main);
+  font-size: 14px;
   transition: var(--transition);
 }
 footer .copy_rights .links a:hover {
@@ -780,7 +801,7 @@ footer .copy_rights .links a:hover {
 .form_field select {
   color: var(--main);
   direction: rtl;
-  height: 52px;
+  height: 48px;
   width: 100%;
   border: none;
   outline: none;
@@ -818,10 +839,30 @@ footer .copy_rights .links a:hover {
   left: 12px;
   top: 46px;
 }
+.form_field .phone-group .PhoneInput {
+  display: flex;
+  gap: 12px;
+}
+.form_field .phone-group .PhoneInput .PhoneInputCountryIcon {
+  position: relative;
+}
+.form_field .phone-group .PhoneInput .PhoneInputCountryIconImg {
+  width: 20px;
+  position: absolute;
+  top: -33px;
+  left: 10px;
+}
+.form_field .phone-group .PhoneInput select {
+  padding: 12px 6px 12px 36px;
+}
+.form_field .phone-group .phone-code {
+  height: 48px;
+  border-radius: 4px;
+}
 
 .form_submit {
   padding: 0 42px;
-  height: 52px;
+  height: 48px;
   border-radius: 12px;
   background: var(--main);
   color: var(--white);
@@ -899,7 +940,7 @@ body .hero_section .search_box .search_form {
   gap: 12px;
 }
 body .hero_section .search_box .search_form .filter_btn {
-  height: 52px;
+  height: 48px;
   min-width: 52px;
   border-radius: 12px;
   border: 1px solid var(--main);
@@ -1090,6 +1131,162 @@ body .sec_header a {
 body .featured_properties {
   background: var(--btn-bg);
   padding: 60px 0;
+}
+body .why_us {
+  display: flex;
+}
+body .why_us .img {
+  flex: 1;
+  aspect-ratio: 3/2;
+  background: var(--btn-bg);
+}
+body .why_us .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .why_us .content {
+  flex: 1;
+  gap: 8px;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body .why_us .content h3 {
+  font-size: 24px;
+  color: var(--main);
+}
+body .why_us .content p {
+  color: var(--gray);
+}
+body .why_us .content .features {
+  gap: 16px;
+  display: grid;
+  margin-top: 32px;
+  grid-template-columns: repeat(2, 1fr);
+}
+body .why_us .content .feature_card {
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--btn-bg);
+}
+body .why_us .content .feature_card img {
+  height: 36px;
+}
+body .why_us .content .feature_card h4 {
+  font-size: 16px;
+  color: var(--main);
+}
+body .why_us .content .feature_card p {
+  font-size: 14px;
+  margin: 0;
+}
+body .download_app {
+  padding: 60px 0;
+  background: var(--btn-bg);
+}
+body .auth_modal {
+  display: flex;
+  padding: 0;
+}
+body .auth_modal .auth_img {
+  flex: 1;
+  position: relative;
+}
+body .auth_modal .auth_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .auth_modal .auth_img .img_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+body .auth_modal .auth_form {
+  flex: 1;
+  display: flex;
+  padding: 32px;
+  gap: 24px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body .auth_modal .auth_form h5 {
+  text-align: start;
+  color: var(--main);
+  font-size: 22px;
+}
+body .auth_modal .auth_form p {
+  color: var(--gray);
+}
+body .auth_modal .auth_form button {
+  width: 100%;
+  padding: 12px 32px;
+  height: 48px;
+  background: var(--main);
+  color: var(--white);
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  font-size: 14px;
+  display: flex;
+}
+body .auth_modal .auth_form button span {
+  width: 100%;
+  color: var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .auth_modal .auth_form button.stroked {
+  border-color: var(--input-stroke);
+  background: none;
+}
+body .auth_modal .auth_form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body .auth_modal .auth_form .social_login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .auth_modal .auth_form .social_login .line {
+  width: 100%;
+  height: 1px;
+  background: var(--input-stroke);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+}
+body .auth_modal .auth_form .social_login .line span {
+  margin-top: -6px;
+  padding: 0 16px;
+  color: var(--main);
+  background: var(--white);
+}
+body .auth_modal .auth_form .social_login .agreeToPrivacy {
+  color: var(--gray);
+  line-height: 1.8;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+body .auth_modal .auth_form .social_login .agreeToPrivacy a {
+  color: var(--main);
 }
 body.en {
   direction: ltr;

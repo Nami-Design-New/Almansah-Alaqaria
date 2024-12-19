@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getResolvedTheme } from "../../redux/slices/themeSlice";
+import { getResolvedTheme } from "../redux/slices/themeSlice";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
@@ -42,14 +42,48 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-lg-3 col-md-6 col-12 p-2"></div>
-          <div className="col-lg-3 col-md-6 col-12 p-2"></div>
-          <div className="col-lg-3 col-md-6 col-12 p-2"></div>
+          
+          <div className="col-lg-3 col-md-6 col-12 p-2">
+            <div className="col">
+              <h5>{t("support")}</h5>
+              <div className="links">
+                <Link to="/contact">{t("contactUs")}</Link>
+                <Link to="/help">{t("help")}</Link>
+                <Link to="/cancellation-policy">{t("cancellationPolicy")}</Link>
+                <Link to="/faqs">{t("faqs")}</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-6 col-12 p-2">
+            <div className="col">
+              <h5>{t("quickLinks")}</h5>
+              <div className="links">
+                <Link to="/">{t("home")}</Link>
+                <Link to="/about">{t("about")}</Link>
+                <Link to="/listings">{t("ads")}</Link>
+                <Link to="/login">{t("login")}</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-3 col-md-6 col-12 p-2">
+            <div className="col">
+              <h5>{t("categories")}</h5>
+              <div className="links">
+                <Link to="/daily-rent">{t("dailyRent")}</Link>
+                <Link to="/properties-for-sale">{t("propertiesForSale")}</Link>
+                <Link to="/real-estate-projects">{t("realEstateProjects")}</Link>
+                <Link to="/wanted-for-purchase">{t("wantedForPurchase")}</Link>
+              </div>
+            </div>
+          </div>
+
           <div className="col-lg-3 col-md-6 col-12 p-2">
             <div className="col">
               <h5>{t("newsletter")}</h5>
               <p>{t("newsletterDesc")}</p>
-              <form>
+              <form className="newsletter-form">
                 <input type="email" placeholder={t("email")} />
                 <button type="submit">
                   <i className="fa-solid fa-paper-plane"></i>
@@ -57,6 +91,7 @@ export default function Footer() {
               </form>
             </div>
           </div>
+
           <div className="col-12 p-2">
             <div className="copy_rights">
               <p>
@@ -64,7 +99,7 @@ export default function Footer() {
                 <Link to="/"> {t("almansah")} </Link>
               </p>
               <div className="links">
-                <Link to="/terms-condtions">{t("terms")}</Link>
+                <Link to="/terms-conditions">{t("terms")}</Link>
                 <Link to="/privacy-policy">{t("privacy")}</Link>
                 <Link to="/contact">{t("contactUs")}</Link>
               </div>
