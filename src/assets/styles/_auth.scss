@@ -1,6 +1,7 @@
 .auth_modal {
   display: flex;
   padding: 0;
+  position: relative;
   .auth_img {
     flex: 1;
     position: relative;
@@ -21,7 +22,7 @@
   .auth_form {
     flex: 1;
     display: flex;
-    padding: 32px;
+    padding: 64px 32px 32px;
     gap: 24px;
     justify-content: space-between;
     flex-direction: column;
@@ -40,7 +41,6 @@
       background: var(--main);
       color: var(--white);
       border-radius: 12px;
-      font-weight: 600;
       border: 1px solid transparent;
       font-size: 14px;
       display: flex;
@@ -54,7 +54,7 @@
         background: none;
       }
     }
-    form{
+    form {
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -86,6 +86,31 @@
           color: var(--main);
         }
       }
+    }
+  }
+  .modal_close_btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+    margin-inline-end: 0 !important;
+    margin-inline-start: auto !important;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    opacity: 1;
+    cursor: pointer;
+    &::before {
+      @include centerAbsolute();
+      font-family: "Font Awesome 6 Pro";
+      content: "\f00d";
+      font-size: 14px;
+      color: var(--main);
+    }
+    &:hover {
+      background: var(--close-hover) !important;
     }
   }
 }

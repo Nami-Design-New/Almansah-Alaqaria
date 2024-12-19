@@ -1,11 +1,18 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { handlePhoneChange } from "../../utils/utils";
 import { Link } from "react-router-dom";
 import PhoneField from "../form/PhoneField";
 import SubmitBtn from "../form/SubmitBtn";
+import InputField from "../form/InputField";
 
 export default function Login({ setFormData, formData }) {
   const { t } = useTranslation();
+  const [loginType, setLoginType] = useState("phone");
+
+  const handleChangeType = () => {
+    loginType === "phone" ? setLoginType("email") : setLoginType("phone");
+  };
 
   return (
     <div className="auth_form">
@@ -15,14 +22,18 @@ export default function Login({ setFormData, formData }) {
       </div>
 
       <form>
-        <PhoneField
-          placeholder="Enter phone number"
-          required
-          id="mobile_number"
-          name="mobile_number"
-          value={formData.mobile_number}
-          onChange={(e) => handlePhoneChange(e, "mobile_number", setFormData)}
-        />
+        {loginType === "phone" ? (
+          <PhoneField
+            placeholder="Enter phone number"
+            required
+            id="mobile_number"
+            name="mobile_number"
+            value={formData.mobile_number}
+            onChange={(e) => handlePhoneChange(e, "mobile_number", setFormData)}
+          />
+        ) : (
+          <InputField placeholder="Enter Your Email" />
+        )}
         <SubmitBtn text={t("continue")} />
       </form>
 
@@ -39,8 +50,14 @@ export default function Login({ setFormData, formData }) {
           <img src="/icons/apple.svg" className="to_dark" alt="apple" />
           <span>{t("continueWithApple")}</span>
         </button>
-        <button className="stroked">
-          <img src="/icons/email.svg" className="to_dark" alt="email" />
+        <button className="stroked" onClick={handleChangeType}>
+          <img
+            src={
+              loginType === "email" ? "/icons/device.svg" : "/icons/email.svg"
+            }
+            className="to_dark"
+            alt="email"
+          />
           <span>{t("continueWithEmail")}</span>
         </button>
 
