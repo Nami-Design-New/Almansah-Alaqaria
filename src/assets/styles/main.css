@@ -1170,6 +1170,36 @@ body .download_app {
   padding: 60px 0;
   background: var(--btn-bg);
 }
+body .auth_layout {
+  display: flex;
+  height: 100vh;
+}
+body .auth_layout .auth_img {
+  flex: 2;
+  height: 100%;
+  position: relative;
+}
+body .auth_layout .auth_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .auth_layout .auth_img .img_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+body .auth_layout .auth_form {
+  flex: 1;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 body.en {
   direction: ltr;
 }

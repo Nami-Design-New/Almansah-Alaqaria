@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getResolvedTheme } from "../../redux/slices/themeSlice";
+import { getResolvedTheme } from "../redux/slices/themeSlice";
 import { useTranslation } from "react-i18next";
 
 export default function Footer() {
