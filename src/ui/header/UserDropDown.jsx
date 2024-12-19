@@ -1,9 +1,13 @@
 import { Dropdown } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { setShowAuthModal } from "../../redux/slices/showAuthModal";
+import { useDispatch } from "react-redux";
 
 export default function UserDropDown() {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+  
   return (
     <Dropdown>
       <Dropdown.Toggle className="user_btn">
@@ -12,10 +16,10 @@ export default function UserDropDown() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item as={Link} to="/login">
+        <Dropdown.Item onClick={() => dispatch(setShowAuthModal(true))}>
           {t("login")}
         </Dropdown.Item>
-        <Dropdown.Item as={Link} to="/register">
+        <Dropdown.Item onClick={() => dispatch(setShowAuthModal(true))}>
           {t("register")}
         </Dropdown.Item>
         <span className="line" />

@@ -1,9 +1,8 @@
-.auth_layout {
+.auth_modal {
   display: flex;
-  height: 100vh;
+  padding: 0;
   .auth_img {
-    flex: 2;
-    height: 100%;
+    flex: 1;
     position: relative;
     img {
       width: 100%;
@@ -21,7 +20,72 @@
   }
   .auth_form {
     flex: 1;
+    display: flex;
     padding: 32px;
-    @include centerFlex();
+    gap: 24px;
+    justify-content: space-between;
+    flex-direction: column;
+    h5 {
+      text-align: start;
+      color: var(--main);
+      font-size: 22px;
+    }
+    p {
+      color: var(--gray);
+    }
+    button {
+      width: 100%;
+      padding: 12px 32px;
+      height: 48px;
+      background: var(--main);
+      color: var(--white);
+      border-radius: 12px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      font-size: 14px;
+      display: flex;
+      span {
+        width: 100%;
+        color: var(--main);
+        @include centerFlex();
+      }
+      &.stroked {
+        border-color: var(--input-stroke);
+        background: none;
+      }
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .social_login {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .line {
+        width: 100%;
+        height: 1px;
+        background: var(--input-stroke);
+        @include centerFlex();
+        margin: 16px 0;
+        span {
+          margin-top: -6px;
+          padding: 0 16px;
+          color: var(--main);
+          background: var(--white);
+        }
+      }
+      .agreeToPrivacy {
+        color: var(--gray);
+        line-height: 1.8;
+        font-size: 14px;
+        margin-top: 12px;
+        margin-bottom: 0;
+        a {
+          color: var(--main);
+        }
+      }
+    }
   }
 }

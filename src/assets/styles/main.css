@@ -238,6 +238,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 .modal-content {
   background: var(--white);
+  border-radius: 24px;
+  overflow: hidden;
 }
 
 .modal .modal-xl {
@@ -799,7 +801,7 @@ footer .copy_rights .links a:hover {
 .form_field select {
   color: var(--main);
   direction: rtl;
-  height: 52px;
+  height: 48px;
   width: 100%;
   border: none;
   outline: none;
@@ -837,10 +839,30 @@ footer .copy_rights .links a:hover {
   left: 12px;
   top: 46px;
 }
+.form_field .phone-group .PhoneInput {
+  display: flex;
+  gap: 12px;
+}
+.form_field .phone-group .PhoneInput .PhoneInputCountryIcon {
+  position: relative;
+}
+.form_field .phone-group .PhoneInput .PhoneInputCountryIconImg {
+  width: 20px;
+  position: absolute;
+  top: -33px;
+  left: 10px;
+}
+.form_field .phone-group .PhoneInput select {
+  padding: 12px 6px 12px 36px;
+}
+.form_field .phone-group .phone-code {
+  height: 48px;
+  border-radius: 4px;
+}
 
 .form_submit {
   padding: 0 42px;
-  height: 52px;
+  height: 48px;
   border-radius: 12px;
   background: var(--main);
   color: var(--white);
@@ -918,7 +940,7 @@ body .hero_section .search_box .search_form {
   gap: 12px;
 }
 body .hero_section .search_box .search_form .filter_btn {
-  height: 52px;
+  height: 48px;
   min-width: 52px;
   border-radius: 12px;
   border: 1px solid var(--main);
@@ -1170,22 +1192,21 @@ body .download_app {
   padding: 60px 0;
   background: var(--btn-bg);
 }
-body .auth_layout {
+body .auth_modal {
   display: flex;
-  height: 100vh;
+  padding: 0;
 }
-body .auth_layout .auth_img {
-  flex: 2;
-  height: 100%;
+body .auth_modal .auth_img {
+  flex: 1;
   position: relative;
 }
-body .auth_layout .auth_img img {
+body .auth_modal .auth_img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body .auth_layout .auth_img .img_overlay {
+body .auth_modal .auth_img .img_overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -1193,12 +1214,79 @@ body .auth_layout .auth_img .img_overlay {
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
 }
-body .auth_layout .auth_form {
+body .auth_modal .auth_form {
   flex: 1;
+  display: flex;
   padding: 32px;
+  gap: 24px;
+  justify-content: space-between;
+  flex-direction: column;
+}
+body .auth_modal .auth_form h5 {
+  text-align: start;
+  color: var(--main);
+  font-size: 22px;
+}
+body .auth_modal .auth_form p {
+  color: var(--gray);
+}
+body .auth_modal .auth_form button {
+  width: 100%;
+  padding: 12px 32px;
+  height: 48px;
+  background: var(--main);
+  color: var(--white);
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  font-size: 14px;
+  display: flex;
+}
+body .auth_modal .auth_form button span {
+  width: 100%;
+  color: var(--main);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+body .auth_modal .auth_form button.stroked {
+  border-color: var(--input-stroke);
+  background: none;
+}
+body .auth_modal .auth_form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body .auth_modal .auth_form .social_login {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+body .auth_modal .auth_form .social_login .line {
+  width: 100%;
+  height: 1px;
+  background: var(--input-stroke);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+}
+body .auth_modal .auth_form .social_login .line span {
+  margin-top: -6px;
+  padding: 0 16px;
+  color: var(--main);
+  background: var(--white);
+}
+body .auth_modal .auth_form .social_login .agreeToPrivacy {
+  color: var(--gray);
+  line-height: 1.8;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+body .auth_modal .auth_form .social_login .agreeToPrivacy a {
+  color: var(--main);
 }
 body.en {
   direction: ltr;

@@ -38,7 +38,7 @@ export default function Why() {
   return (
     <section className="why_us">
       <div className="img">
-        <img src="/public/images/why.png" alt="why" />
+        <img src="/images/why.png" alt="why" />
       </div>
       <div className="content">
         <h3>{t("whyTitle")}</h3>
