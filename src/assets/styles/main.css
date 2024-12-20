@@ -91,6 +91,10 @@ ul {
   margin: 0;
 }
 
+ol {
+  padding: unset;
+}
+
 a,
 button {
   text-decoration: none;
