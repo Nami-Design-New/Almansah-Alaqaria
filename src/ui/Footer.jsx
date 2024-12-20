@@ -101,7 +101,6 @@ export default function Footer() {
               <div className="links">
                 <Link to="/terms-conditions">{t("terms")}</Link>
                 <Link to="/privacy-policy">{t("privacy")}</Link>
-                <Link to="/contact">{t("contactUs")}</Link>
               </div>
             </div>
           </div>

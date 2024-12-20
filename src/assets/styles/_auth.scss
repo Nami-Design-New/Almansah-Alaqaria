@@ -37,13 +37,14 @@
     button {
       width: 100%;
       padding: 12px 32px;
-      height: 48px;
+      height: 52px;
       background: var(--main);
       color: var(--white);
       border-radius: 12px;
       border: 1px solid transparent;
       font-size: 14px;
       display: flex;
+      align-items: center;
       span {
         width: 100%;
         color: var(--main);
