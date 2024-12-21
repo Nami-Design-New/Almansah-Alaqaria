@@ -254,22 +254,6 @@ input[type=number]::-webkit-inner-spin-button {
   justify-content: center;
 }
 
-.Toastify__toast-body {
-  direction: ltr !important;
-}
-
-.Toastify__toast-body > div:last-child {
-  line-height: 24px;
-  flex: unset;
-  font-family: "Baloo Bhaijaan 2", sans-serif;
-}
-
-@media only screen and (max-width: 480px) {
-  .Toastify__toast-container {
-    right: 0;
-    left: initial;
-  }
-}
 .css-t3ipsp-control {
   border-color: var(--light-gray) !important;
   box-shadow: none !important;
@@ -449,6 +433,7 @@ input[type=number]::-webkit-inner-spin-button {
   background: var(--input-bg);
   height: 52px;
   border-radius: 12px;
+  direction: ltr;
 }
 .react-tel-input .form-control {
   width: 100%;
@@ -458,6 +443,7 @@ input[type=number]::-webkit-inner-spin-button {
   background: var(--input-bg);
   padding: 8px;
   border-radius: 12px;
+  direction: ltr;
   border: 0;
 }
 .react-tel-input .flag-dropdown {
@@ -512,6 +498,7 @@ input[type=number]::-webkit-inner-spin-button {
   border: 1px solid var(--input-stroke);
   height: 42px;
   border-radius: 8px;
+  direction: ltr !important;
 }
 .react-tel-input .country-list .search span {
   display: none;
@@ -528,6 +515,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .react-tel-input .country-list .dial-code {
   color: var(--gray);
+}
+
+input[type=email] {
+  direction: ltr !important;
 }
 
 header {
@@ -1387,7 +1378,7 @@ body .auth_modal .auth_form .social_login .agreeToPrivacy a {
 body .auth_modal .modal_close_btn {
   position: absolute;
   top: 16px;
-  right: 16px;
+  left: 16px;
   padding: 0 !important;
   background: none !important;
   box-shadow: none !important;
@@ -1420,4 +1411,8 @@ body.en .form_field input,
 body.en .form_field select,
 body.en .form_field textarea {
   direction: ltr;
+}
+body.en .auth_modal .modal_close_btn {
+  left: initial;
+  right: 16px;
 }/*# sourceMappingURL=main.css.map */

@@ -32,7 +32,7 @@ export default function Login({ setFormData, formData }) {
             onChange={(e) => handlePhoneChange(e, "mobile_number", setFormData)}
           />
         ) : (
-          <InputField placeholder="Enter Your Email" />
+          <InputField placeholder="Enter Your Email" type="email" />
         )}
         <SubmitBtn text={t("continue")} />
       </form>
@@ -50,6 +50,7 @@ export default function Login({ setFormData, formData }) {
           <img src="/icons/apple.svg" className="to_dark" alt="apple" />
           <span>{t("continueWithApple")}</span>
         </button>
+
         <button className="stroked" onClick={handleChangeType}>
           <img
             src={

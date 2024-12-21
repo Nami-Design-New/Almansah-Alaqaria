@@ -26,5 +26,9 @@ body {
         direction: ltr;
       }
     }
+    .auth_modal .modal_close_btn {
+      left: initial;
+      right: 16px;
+    }
   }
 }
