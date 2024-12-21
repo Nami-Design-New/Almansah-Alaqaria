@@ -91,6 +91,10 @@ ul {
   margin: 0;
 }
 
+ol {
+  padding: unset;
+}
+
 a,
 button {
   text-decoration: none;
@@ -250,22 +254,6 @@ input[type=number]::-webkit-inner-spin-button {
   justify-content: center;
 }
 
-.Toastify__toast-body {
-  direction: ltr !important;
-}
-
-.Toastify__toast-body > div:last-child {
-  line-height: 24px;
-  flex: unset;
-  font-family: "Baloo Bhaijaan 2", sans-serif;
-}
-
-@media only screen and (max-width: 480px) {
-  .Toastify__toast-container {
-    right: 0;
-    left: initial;
-  }
-}
 .css-t3ipsp-control {
   border-color: var(--light-gray) !important;
   box-shadow: none !important;
@@ -435,6 +423,102 @@ input[type=number]::-webkit-inner-spin-button {
   color: var(--white);
   border-color: var(--main);
   background-color: var(--main);
+}
+
+.react-tel-input {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid var(--input-stroke);
+  background: var(--input-bg);
+  height: 52px;
+  border-radius: 12px;
+  direction: ltr;
+}
+.react-tel-input .form-control {
+  width: 100%;
+  height: 100%;
+  color: var(--main);
+  font-size: 14px;
+  background: var(--input-bg);
+  padding: 8px;
+  border-radius: 12px;
+  direction: ltr;
+  border: 0;
+}
+.react-tel-input .flag-dropdown {
+  background: transparent;
+  border: none;
+  position: static;
+  border-radius: 12px 0 0 12px;
+  min-width: 52px;
+}
+.react-tel-input .flag-dropdown.open {
+  background: var(--input-bg);
+  border-radius: 12px;
+}
+.react-tel-input .flag-dropdown.open .selected-flag {
+  border-radius: 12px;
+  background: var(--input-bg);
+}
+.react-tel-input .selected-flag {
+  background: transparent;
+  padding: 0;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.react-tel-input .selected-flag .arrow {
+  border-top-color: var(--main);
+}
+.react-tel-input .selected-flag .arrow.up {
+  border-bottom-color: var(--main);
+}
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus {
+  background: var(--input-bg);
+}
+.react-tel-input .country-list {
+  width: 100%;
+  left: 0;
+  background: var(--dropdown-bg);
+  border: 1px solid var(--light-gray);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-top: 4px;
+  scrollbar-width: none;
+}
+.react-tel-input .country-list .search {
+  padding: 8px;
+  background: var(--white);
+}
+.react-tel-input .country-list .search input {
+  margin: 0;
+  border: 1px solid var(--input-stroke);
+  height: 42px;
+  border-radius: 8px;
+  direction: ltr !important;
+}
+.react-tel-input .country-list .search span {
+  display: none;
+}
+.react-tel-input .country-list .country {
+  color: var(--main);
+  padding: 8px 10px;
+}
+.react-tel-input .country-list .country:hover {
+  background: var(--input-bg);
+}
+.react-tel-input .country-list .country.highlight {
+  background: var(--input-bg);
+}
+.react-tel-input .country-list .dial-code {
+  color: var(--gray);
+}
+
+input[type=email] {
+  direction: ltr !important;
 }
 
 header {
@@ -802,7 +886,7 @@ footer .copy_rights .links a:hover {
 .form_field select {
   color: var(--main);
   direction: rtl;
-  height: 48px;
+  height: 52px;
   width: 100%;
   border: none;
   outline: none;
@@ -857,13 +941,13 @@ footer .copy_rights .links a:hover {
   padding: 12px 6px 12px 36px;
 }
 .form_field .phone-group .phone-code {
-  height: 48px;
+  height: 52px;
   border-radius: 4px;
 }
 
 .form_submit {
   padding: 0 42px;
-  height: 48px;
+  height: 52px;
   border-radius: 12px;
   background: var(--main);
   color: var(--white);
@@ -942,7 +1026,7 @@ body .hero_section .search_box .search_form {
   gap: 12px;
 }
 body .hero_section .search_box .search_form .filter_btn {
-  height: 48px;
+  height: 52px;
   min-width: 52px;
   border-radius: 12px;
   border: 1px solid var(--main);
@@ -1061,7 +1145,7 @@ body .filter_modal .filter_footer .submit_btn {
   background: var(--second);
   color: #fff;
   padding: 0 32px;
-  height: 48px;
+  height: 52px;
   border-radius: 12px;
   font-size: 16px;
   display: flex;
@@ -1236,13 +1320,14 @@ body .auth_modal .auth_form p {
 body .auth_modal .auth_form button {
   width: 100%;
   padding: 12px 32px;
-  height: 48px;
+  height: 52px;
   background: var(--main);
   color: var(--white);
   border-radius: 12px;
   border: 1px solid transparent;
   font-size: 14px;
   display: flex;
+  align-items: center;
 }
 body .auth_modal .auth_form button span {
   width: 100%;
@@ -1293,7 +1378,7 @@ body .auth_modal .auth_form .social_login .agreeToPrivacy a {
 body .auth_modal .modal_close_btn {
   position: absolute;
   top: 16px;
-  right: 16px;
+  left: 16px;
   padding: 0 !important;
   background: none !important;
   box-shadow: none !important;
@@ -1326,4 +1411,8 @@ body.en .form_field input,
 body.en .form_field select,
 body.en .form_field textarea {
   direction: ltr;
+}
+body.en .auth_modal .modal_close_btn {
+  left: initial;
+  right: 16px;
 }/*# sourceMappingURL=main.css.map */

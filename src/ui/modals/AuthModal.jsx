@@ -30,9 +30,9 @@ export default function AuthModal() {
         </div>
         {authStep === "login" && (
           <Login
-            setAuthStep={setAuthStep}
             formData={formData}
             setFormData={setFormData}
+            setAuthStep={setAuthStep}
           />
         )}
       </Modal.Body>

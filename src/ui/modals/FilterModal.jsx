@@ -171,7 +171,7 @@ export default function FilterModal({ showModal, setShowModal }) {
           {/* features */}
           <div className="filter_field">
             <div className="head">
-              <h6>{t("features")}</h6>
+              <h6>{t("featuresTitle")}</h6>
               <button>{t("clear")}</button>
             </div>
 

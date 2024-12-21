@@ -116,6 +116,10 @@ ul {
   margin: 0;
 }
 
+ol {
+  padding: unset;
+}
+
 a,
 button {
   text-decoration: none;
@@ -267,25 +271,6 @@ input[type="number"] {
   width: min(100% - 24px, 1140px);
   margin: 20px auto;
   justify-content: center;
-}
-
-// Toastify customization
-
-.Toastify__toast-body {
-  direction: ltr !important;
-}
-
-.Toastify__toast-body > div:last-child {
-  line-height: 24px;
-  flex: unset;
-  font-family: "Baloo Bhaijaan 2", sans-serif;
-}
-
-@media only screen and (max-width: 480px) {
-  .Toastify__toast-container {
-    right: 0;
-    left: initial;
-  }
 }
 
 // Select customization
@@ -449,4 +434,103 @@ input[type="number"] {
       background-color: var(--main);
     }
   }
+}
+
+// Phone Input customization
+.react-tel-input {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid var(--input-stroke);
+  background: var(--input-bg);
+  height: 52px;
+  border-radius: 12px;
+  direction: ltr;
+  .form-control {
+    width: 100%;
+    height: 100%;
+    color: var(--main);
+    font-size: 14px;
+    background: var(--input-bg);
+    padding: 8px;
+    border-radius: 12px;
+    direction: ltr;
+    border: 0;
+  }
+
+  .flag-dropdown {
+    background: transparent;
+    border: none;
+    position: static;
+    border-radius: 12px 0 0 12px;
+    min-width: 52px;
+    &.open {
+      background: var(--input-bg);
+      border-radius: 12px;
+      .selected-flag {
+        border-radius: 12px;
+        background: var(--input-bg);
+      }
+    }
+  }
+
+  .selected-flag {
+    background: transparent;
+    padding: 0;
+    width: 100%;
+    border-radius: 12px;
+    @include centerFlex();
+    .arrow {
+      border-top-color: var(--main);
+      &.up {
+        border-bottom-color: var(--main);
+      }
+    }
+    &:hover,
+    &:focus {
+      background: var(--input-bg);
+    }
+  }
+
+  .country-list {
+    width: 100%;
+    left: 0;
+    background: var(--dropdown-bg);
+    border: 1px solid var(--light-gray);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-top: 4px;
+    scrollbar-width: none;
+    .search {
+      padding: 8px;
+      input {
+        margin: 0;
+        border: 1px solid var(--input-stroke);
+        height: 42px;
+        border-radius: 8px;
+        direction: ltr !important;
+      }
+      background: var(--white);
+      span {
+        display: none;
+      }
+    }
+    .country {
+      color: var(--main);
+      padding: 8px 10px;
+      &:hover {
+        background: var(--input-bg);
+      }
+      &.highlight {
+        background: var(--input-bg);
+      }
+    }
+    .dial-code {
+      color: var(--gray);
+    }
+  }
+}
+
+input[type="email"] {
+  direction: ltr !important;
 }
