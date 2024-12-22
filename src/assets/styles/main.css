@@ -958,6 +958,61 @@ footer .copy_rights .links a:hover {
   gap: 8px;
 }
 
+.otp-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  direction: ltr !important;
+}
+@media (max-width: 576px) {
+  .otp-container {
+    gap: 8px;
+  }
+}
+.otp-container .otp-input {
+  border-radius: 0 !important;
+  flex: 1;
+  width: inherit;
+  height: 80px !important;
+  text-align: center;
+  border-bottom: 1px solid var(--main);
+  font-size: 28px !important;
+  font-weight: 600;
+  color: var(--main) !important;
+  outline: none;
+}
+.otp-container .otp-input::-webkit-inner-spin-button {
+  display: none;
+}
+@media (max-width: 576px) {
+  .otp-container .otp-input {
+    height: 60px !important;
+  }
+}
+
+.resend-code {
+  width: 100%;
+  display: flex;
+  padding: 10px 0 0;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.resend-code .resend_link {
+  color: var(--main);
+  cursor: pointer;
+}
+.resend-code .resend_link.disabled {
+  pointer-events: none;
+}
+.resend-code .timer {
+  gap: 2px;
+  display: flex;
+  color: var(--gray);
+  margin-inline-start: auto;
+}
+
 .page_not_found .error_container {
   display: flex;
   flex-direction: column;
@@ -1306,7 +1361,6 @@ body .auth_modal .auth_form {
   display: flex;
   padding: 64px 32px 32px;
   gap: 24px;
-  justify-content: space-between;
   flex-direction: column;
 }
 body .auth_modal .auth_form h5 {
@@ -1316,6 +1370,17 @@ body .auth_modal .auth_form h5 {
 }
 body .auth_modal .auth_form p {
   color: var(--gray);
+}
+body .auth_modal .auth_form p b {
+  color: var(--main);
+  font-size: 14px;
+  padding-inline-end: 16px;
+}
+body .auth_modal .auth_form p span {
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--main);
+  text-decoration: underline;
 }
 body .auth_modal .auth_form button {
   width: 100%;
@@ -1335,6 +1400,9 @@ body .auth_modal .auth_form button span {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+body .auth_modal .auth_form button img {
+  height: 20px;
 }
 body .auth_modal .auth_form button.stroked {
   border-color: var(--input-stroke);

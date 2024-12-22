@@ -24,7 +24,6 @@
     display: flex;
     padding: 64px 32px 32px;
     gap: 24px;
-    justify-content: space-between;
     flex-direction: column;
     h5 {
       text-align: start;
@@ -33,6 +32,17 @@
     }
     p {
       color: var(--gray);
+      b {
+        color: var(--main);
+        font-size: 14px;
+        padding-inline-end: 16px;
+      }
+      span {
+        cursor: pointer;
+        font-size: 14px;
+        color: var(--main);
+        text-decoration: underline;
+      }
     }
     button {
       width: 100%;
@@ -49,6 +59,9 @@
         width: 100%;
         color: var(--main);
         @include centerFlex();
+      }
+      img {
+        height: 20px;
       }
       &.stroked {
         border-color: var(--input-stroke);

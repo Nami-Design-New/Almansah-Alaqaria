@@ -3,13 +3,15 @@ import { Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowAuthModal } from "../../redux/slices/showAuthModal";
 import Login from "../auth/Login";
+import ConfirmCode from "../auth/ConfirmCode";
 
 export default function AuthModal() {
   const { show } = useSelector((state) => state.showAuthModal);
   const dispatch = useDispatch();
-  const [authStep, setAuthStep] = useState("login");
+
+  const [authStep, setAuthStep] = useState("confirm-code");
   const [formData, setFormData] = useState({
-    mobile_number: "",
+    login: "+996 (000) 000 000",
   });
 
   return (
@@ -25,11 +27,21 @@ export default function AuthModal() {
           className="modal_close_btn"
           onClick={() => dispatch(setShowAuthModal(false))}
         />
+
         <div className="auth_img">
           <img src="/images/auth.jpg" alt="" />
         </div>
+
         {authStep === "login" && (
           <Login
+            formData={formData}
+            setFormData={setFormData}
+            setAuthStep={setAuthStep}
+          />
+        )}
+
+        {authStep === "confirm-code" && (
+          <ConfirmCode
             formData={formData}
             setFormData={setFormData}
             setAuthStep={setAuthStep}

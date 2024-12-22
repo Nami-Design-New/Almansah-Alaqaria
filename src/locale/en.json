@@ -75,6 +75,12 @@
   "byContinueYouAgreeTo": "By continuing, you agree to",
   "ownBy": "by Almansah Alaqaria",
   "continue": "Continue",
+  "enterOtp": "Enter OTP",
+  "enterotpDescforPhone": "Please enter the verification code sent to the number",
+  "edit": "Edit",
+  "confirm": "Confirm",
+  "recieveCodeOnWhatsApp": "Receive the code on WhatsApp",
+  "resendCode": "Resend Code",
   "page_not_found": {
     "title": "Oops! 404",
     "description": "We can't seem to find the page you're looking for.",
