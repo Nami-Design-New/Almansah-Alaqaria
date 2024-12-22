@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { handlePhoneChange } from "../../utils/utils";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { handleChange } from "./../../utils/utils";
 import PhoneField from "../form/PhoneField";
 import SubmitBtn from "../form/SubmitBtn";
 import InputField from "../form/InputField";
@@ -12,6 +12,10 @@ export default function Login({ setFormData, formData }) {
 
   const handleChangeType = () => {
     loginType === "phone" ? setLoginType("email") : setLoginType("phone");
+  };
+
+  const handleChangePhone = (value) => {
+    setFormData((prev) => ({ ...prev, login: value }));
   };
 
   return (
@@ -26,13 +30,19 @@ export default function Login({ setFormData, formData }) {
           <PhoneField
             placeholder="Enter phone number"
             required
-            id="mobile_number"
-            name="mobile_number"
-            value={formData.mobile_number}
-            onChange={(e) => handlePhoneChange(e, "mobile_number", setFormData)}
+            id="login"
+            name="login"
+            value={formData.login}
+            onChange={handleChangePhone}
           />
         ) : (
-          <InputField placeholder="Enter Your Email" type="email" />
+          <InputField
+            placeholder="Enter Your Email"
+            type="email"
+            required
+            name="email"
+            onChange={(e) => handleChange(e, setFormData)}
+          />
         )}
         <SubmitBtn text={t("continue")} />
       </form>

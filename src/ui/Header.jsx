@@ -23,6 +23,7 @@ export default function Header() {
             alt="logo"
           />
         </Link>
+
         <div className="nav_links">
           <NavLink to="/">{t("home")}</NavLink>
           <NavLink to="/about">{t("about")}</NavLink>
@@ -30,6 +31,7 @@ export default function Header() {
           <NavLink to="/add-ad">{t("add_ad")}</NavLink>
           <NavLink to="/contact">{t("contact")}</NavLink>
         </div>
+
         <div className="actions">
           <ThemeDropDown />
           <LanguageDropDown />

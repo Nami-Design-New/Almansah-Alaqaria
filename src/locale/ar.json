@@ -76,6 +76,12 @@
   "byContinueYouAgreeTo": "بمواصلتك، فإنك توافق على ",
   "ownBy": "الخاصة بـالمنصة العقارية",
   "continue": "إستمرار",
+  "enterOtp": "ادخل رمز التحقق",
+  "enterotpDescforPhone": "من فضلك ادخل رمز التحقق الذي تم ارساله الي الرقم",
+  "edit": "تعديل",
+  "confirm": "تأكيد",
+  "recieveCodeOnWhatsApp": "استلام الرمز عبر الواتساب",
+  "resendCode": "إعادة إرسال الرمز",
   "page_not_found": {
     "title": "Oops! 404",
     "description": "عذراً، لا يمكننا العثور على الصفحة التي تبحث عنها.",
