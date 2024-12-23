@@ -90,6 +90,8 @@
   "firstName": "First Name",
   "lastName": "Last Name",
   "personalAvatar": "Personal Avatar",
+  "save": "Save",
+  "share": "Share",
   "page_not_found": {
     "title": "Oops! 404",
     "description": "We can't seem to find the page you're looking for.",

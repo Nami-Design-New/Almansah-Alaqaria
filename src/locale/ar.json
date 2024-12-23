@@ -91,6 +91,8 @@
   "firstName": "الاسم الأول",
   "lastName": "الاسم الأخير",
   "personalAvatar": "الصورة الشخصية",
+  "save": "حفظ",
+  "share": "مشاركة",
   "page_not_found": {
     "title": "Oops! 404",
     "description": "عذراً، لا يمكننا العثور على الصفحة التي تبحث عنها.",

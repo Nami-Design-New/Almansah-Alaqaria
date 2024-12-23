@@ -1562,6 +1562,71 @@ body .auth_modal .modal_close_btn::before {
 body .auth_modal .modal_close_btn:hover {
   background: var(--close-hover) !important;
 }
+body .property_details {
+  padding: 40px 0;
+}
+body .property_details .details_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .property_details .details_header h1 {
+  color: var(--main);
+  font-size: 22px;
+  margin: 0;
+}
+body .property_details .details_header .actions {
+  display: flex;
+  align-items: center;
+}
+body .property_details .details_header .actions button {
+  color: var(--main);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+body .property_details .details_header .actions button:hover {
+  background-color: var(--close-hover);
+}
+body .property_details .gallery {
+  display: grid;
+  grid-gap: 8px;
+  overflow: hidden;
+  border-radius: 16px;
+  grid-template-columns: 1fr 1fr;
+}
+body .property_details .gallery .main_img,
+body .property_details .gallery .img {
+  position: relative;
+}
+body .property_details .gallery .main_img::before,
+body .property_details .gallery .img::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: var(--transition);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+  pointer-events: none;
+}
+body .property_details .gallery .main_img:hover::before,
+body .property_details .gallery .img:hover::before {
+  opacity: 1;
+}
+body .property_details .gallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .property_details .gallery .thumbnails_grid {
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: 1fr 1fr;
+}
 body.en {
   direction: ltr;
   font-family: "Outfit", sans-serif;
