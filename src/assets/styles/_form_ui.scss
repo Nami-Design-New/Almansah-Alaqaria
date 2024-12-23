@@ -7,10 +7,7 @@
   flex-wrap: wrap !important;
   label {
     color: var(--main);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
+    font-size: 14px;
     svg,
     i {
       stroke: var(--main);
@@ -24,6 +21,7 @@
       font-size: 12px;
       color: var(--input-hint);
       width: 100%;
+      margin-inline-start: 8px;
     }
   }
   input,

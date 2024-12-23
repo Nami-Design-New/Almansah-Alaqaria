@@ -3,15 +3,16 @@ import { Modal } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowAuthModal } from "../../redux/slices/showAuthModal";
 import Login from "../auth/Login";
+import Register from "../auth/Register";
 import ConfirmCode from "../auth/ConfirmCode";
 
 export default function AuthModal() {
   const { show } = useSelector((state) => state.showAuthModal);
   const dispatch = useDispatch();
 
-  const [authStep, setAuthStep] = useState("confirm-code");
+  const [authStep, setAuthStep] = useState("login");
   const [formData, setFormData] = useState({
-    login: "+996 (000) 000 000",
+    login: "+966 (000) 000 000",
   });
 
   return (
@@ -28,25 +29,37 @@ export default function AuthModal() {
           onClick={() => dispatch(setShowAuthModal(false))}
         />
 
-        <div className="auth_img">
+        <div className={`auth_img ${authStep === "register" ? "d-none" : ""}`}>
           <img src="/images/auth.jpg" alt="" />
         </div>
 
-        {authStep === "login" && (
-          <Login
-            formData={formData}
-            setFormData={setFormData}
-            setAuthStep={setAuthStep}
-          />
-        )}
+        <div
+          className={`auth_form ${authStep === "register" ? "register" : ""}`}
+        >
+          {authStep === "login" && (
+            <Login
+              formData={formData}
+              setFormData={setFormData}
+              setAuthStep={setAuthStep}
+            />
+          )}
 
-        {authStep === "confirm-code" && (
-          <ConfirmCode
-            formData={formData}
-            setFormData={setFormData}
-            setAuthStep={setAuthStep}
-          />
-        )}
+          {authStep === "confirm" && (
+            <ConfirmCode
+              formData={formData}
+              setFormData={setFormData}
+              setAuthStep={setAuthStep}
+            />
+          )}
+
+          {authStep === "register" && (
+            <Register
+              formData={formData}
+              setFormData={setFormData}
+              setAuthStep={setAuthStep}
+            />
+          )}
+        </div>
       </Modal.Body>
     </Modal>
   );

@@ -28,7 +28,6 @@ export default function Destinations() {
             <Swiper
               slidesPerView={4}
               speed={1000}
-              effect="fade"
               loop={true}
               modules={[Navigation, Autoplay]}
               spaceBetween={16}

@@ -1,4 +1,4 @@
-export default function SubmitBtn({ className, text, img, loading = false }) {
+export default function SubmitBtn({ className = "", text, img, loading = false }) {
   return (
     <button
       className={`form_submit ${className}`}
