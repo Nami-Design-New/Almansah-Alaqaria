@@ -862,10 +862,7 @@ footer .copy_rights .links a:hover {
 }
 .form_field label {
   color: var(--main);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
+  font-size: 14px;
 }
 .form_field label svg,
 .form_field label i {
@@ -880,6 +877,7 @@ footer .copy_rights .links a:hover {
   font-size: 12px;
   color: var(--input-hint);
   width: 100%;
+  margin-inline-start: 8px;
 }
 .form_field input,
 .form_field textarea,
@@ -1339,7 +1337,7 @@ body .auth_modal {
   position: relative;
 }
 body .auth_modal .auth_img {
-  flex: 1;
+  width: 50%;
   position: relative;
 }
 body .auth_modal .auth_img img {
@@ -1357,11 +1355,14 @@ body .auth_modal .auth_img .img_overlay {
   background: rgba(0, 0, 0, 0.3);
 }
 body .auth_modal .auth_form {
-  flex: 1;
+  width: 50%;
   display: flex;
   padding: 64px 32px 32px;
   gap: 24px;
   flex-direction: column;
+}
+body .auth_modal .auth_form.register {
+  width: 100%;
 }
 body .auth_modal .auth_form h5 {
   text-align: start;
@@ -1381,6 +1382,11 @@ body .auth_modal .auth_form p span {
   font-size: 14px;
   color: var(--main);
   text-decoration: underline;
+}
+body .auth_modal .auth_form .form_group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 body .auth_modal .auth_form button {
   width: 100%;
@@ -1442,6 +1448,91 @@ body .auth_modal .auth_form .social_login .agreeToPrivacy {
 }
 body .auth_modal .auth_form .social_login .agreeToPrivacy a {
   color: var(--main);
+}
+body .auth_modal .auth_form .swiper-slide {
+  height: 100%;
+}
+body .auth_modal .auth_form .choose_img {
+  display: flex;
+  width: 100%;
+  margin-bottom: 14px;
+}
+body .auth_modal .auth_form .choose_img .choose_img {
+  width: 100%;
+  cursor: pointer;
+}
+body .auth_modal .auth_form .choose_img .choose_img input {
+  display: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body .auth_modal .auth_form .choose_img .choose_img input:checked + .img_wrap {
+  border-color: var(--main);
+}
+body .auth_modal .auth_form .choose_img .choose_img input:checked + .img_wrap::before {
+  opacity: 1;
+}
+body .auth_modal .auth_form .choose_img .choose_img .img_wrap {
+  position: relative;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+body .auth_modal .auth_form .choose_img .choose_img .img_wrap img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .auth_modal .auth_form .choose_img .choose_img .img_wrap::before {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Font Awesome 6 Pro";
+  content: "\f00c";
+  opacity: 0;
+  font-size: 12px;
+  color: var(--white);
+  background: var(--main);
+  transition: var(--transition);
+}
+body .auth_modal .auth_form .choose_img .choose_img .upload_img {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--input-stroke);
+  border-radius: 12px;
+}
+body .auth_modal .auth_form .choose_img .choose_img .upload_img::before {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Font Awesome 6 Pro";
+  content: "+";
+  font-size: 12px;
+  color: var(--main);
+  background: var(--input-stroke);
+  transition: var(--transition);
 }
 body .auth_modal .modal_close_btn {
   position: absolute;

@@ -6,7 +6,7 @@ import ResendCode from "../form/ResendCode";
 export default function ConfirmCode({ formData, setFormData, setAuthStep }) {
   const { t } = useTranslation();
   return (
-    <div className="auth_form">
+    <>
       <div className="auth_header">
         <h5>{t("enterOtp")}</h5>
         <p>
@@ -27,6 +27,6 @@ export default function ConfirmCode({ formData, setFormData, setAuthStep }) {
           <span>{t("recieveCodeOnWhatsApp")}</span>
         </button>
       </div>
-    </div>
+    </>
   );
 }

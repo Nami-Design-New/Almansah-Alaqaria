@@ -19,7 +19,7 @@ export default function Login({ setFormData, formData }) {
   };
 
   return (
-    <div className="auth_form">
+    <>
       <div className="auth_header">
         <h5>{t("authTitle")}</h5>
         <p>{t("authDesc")}</p>
@@ -77,6 +77,6 @@ export default function Login({ setFormData, formData }) {
           {t("and")} <Link to="/privacy">{t("privacy")}</Link>
         </p>
       </div>
-    </div>
+    </>
   );
 }
