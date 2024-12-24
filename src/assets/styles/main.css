@@ -298,6 +298,19 @@ input[type=number]::-webkit-inner-spin-button {
   fill: var(--main);
 }
 
+.map_loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--close-hover);
+}
+.map_loader i {
+  font-size: 32px;
+  color: var(--main);
+}
+
 .back-to-top {
   position: fixed;
   z-index: 99;
@@ -594,10 +607,17 @@ header nav .actions .rounded_btn {
   color: var(--main);
   border: 0;
 }
+header nav .actions .rounded_btn:active {
+  background: var(--btn-bg);
+  color: var(--main);
+}
 header nav .actions .rounded_btn.show {
   background: var(--btn-bg);
 }
 
+footer {
+  border-top: 1px solid var(--input-stroke);
+}
 footer .footer_header {
   width: 100%;
   padding: 24px 0;
@@ -1608,13 +1628,35 @@ body .property_details .gallery .img::before {
   transition: var(--transition);
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 0;
   pointer-events: none;
 }
 body .property_details .gallery .main_img:hover::before,
 body .property_details .gallery .img:hover::before {
   opacity: 1;
+}
+body .property_details .gallery .view_all_img {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.6745098039);
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+body .property_details .gallery .view_all_img img {
+  height: 18px;
+  width: 18px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 body .property_details .gallery img {
   width: 100%;
@@ -1626,6 +1668,222 @@ body .property_details .gallery .thumbnails_grid {
   display: grid;
   grid-gap: 8px;
   grid-template-columns: 1fr 1fr;
+}
+body .property_details .about_place {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  padding-inline-end: 42px;
+}
+body .property_details .about_place .host_card {
+  border: 1px solid var(--input-stroke);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+  gap: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .property_details .about_place .host_card .avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body .property_details .about_place .host_card .avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .property_details .about_place .host_card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+body .property_details .about_place .host_card .info .title {
+  gap: 48px;
+  display: flex;
+  align-items: center;
+}
+body .property_details .about_place .host_card .info .title h6 {
+  color: var(--main);
+  margin: 0;
+  font-size: 18px;
+}
+body .property_details .about_place .host_card .info .title p {
+  color: var(--gray);
+  font-size: 14px;
+}
+body .property_details .about_place .host_card .info .title span {
+  display: flex;
+  gap: 4px;
+  font-size: 14px;
+  align-items: center;
+  color: var(--main);
+}
+body .property_details .about_place h3 {
+  color: var(--main);
+  font-size: 20px;
+  margin-bottom: 0;
+}
+body .property_details .about_place p {
+  font-size: 16px;
+  color: var(--gray);
+  margin: 0;
+}
+body .property_details .about_place .line {
+  width: 100%;
+  height: 1px;
+  margin: 24px 0;
+  display: block;
+  background-color: var(--input-stroke);
+}
+body .property_details .about_place ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+body .property_details .about_place ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--main);
+  background: var(--close-hover);
+}
+body .property_details .reservation_holder {
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
+  position: sticky;
+  top: 100px;
+  border: 1px solid var(--input-stroke);
+}
+body .property_details .reservation_holder .box {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--input-stroke);
+}
+body .property_details .reservation_holder .box:last-child {
+  border-bottom: none;
+}
+body .property_details .reservation_holder .box:first-child {
+  padding-top: 0;
+}
+body .property_details .reservation_holder .box h5 {
+  color: var(--main);
+  font-size: 18px;
+}
+body .property_details .reservation_holder .box h6 {
+  color: var(--gray);
+  font-size: 14px;
+  margin: 0;
+}
+body .property_details .reservation_holder .box .arrival_departure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .property_details .reservation_holder .box .arrival_departure h5 {
+  font-size: 16px;
+}
+body .property_details .reservation_holder .box .recipt ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body .property_details .reservation_holder .box .recipt ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .property_details .reservation_holder .box .recipt ul li div {
+  color: var(--main);
+}
+body .property_details .reservation_holder .box .recipt ul li h6 {
+  color: var(--main);
+  font-size: 16px;
+}
+body .property_details .reservation_holder .box .recipt ul li span {
+  color: var(--second);
+  font-weight: 600;
+  font-size: 16px;
+}
+body .property_details .reservation_holder .box .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .property_details .reservation_holder .box .total div {
+  color: var(--main);
+}
+body .property_details .reservation_holder .box .total h6 {
+  color: var(--main);
+  font-size: 18px;
+}
+body .property_details .reservation_holder .box .total span {
+  color: var(--second);
+  font-weight: 600;
+  font-size: 16px;
+}
+body .property_details .reservation_holder .box .check_in_out {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--input-stroke);
+  margin-bottom: 12px;
+  display: flex;
+  cursor: pointer;
+}
+body .property_details .reservation_holder .box .check_in_out .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 12px;
+  border-right: 1px solid var(--input-stroke);
+  flex-direction: column;
+}
+body .property_details .reservation_holder .box .check_in_out .button:last-child {
+  border-right: none;
+}
+body .property_details .reservation_holder .box .check_in_out .button h5 {
+  color: var(--main);
+  font-size: 14px;
+}
+body .property_details .reservation_holder .box .check_in_out .button h6 {
+  color: var(--gray);
+  font-size: 14px;
+}
+body .property_details .reservation_holder .box .check_in_out h6 {
+  color: var(--main);
+  font-size: 16px;
+}
+body .property_details .reservation_holder .box .check_in_out span {
+  color: var(--second);
+  font-weight: 600;
+  font-size: 16px;
+}
+body .property_details .map_section {
+  width: 100%;
+}
+body .property_details .map_section h3 {
+  color: var(--main);
+  font-size: 20px;
+}
+body .property_details .map_section p {
+  font-size: 14px;
+  color: var(--gray);
+}
+body .property_details .map_section .map {
+  height: 400px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 body.en {
   direction: ltr;
