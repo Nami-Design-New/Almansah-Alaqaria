@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import { Autoplay, Navigation } from "swiper/modules";
 import { useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,7 +19,6 @@ export default function Destinations() {
                 <h2>{t("destinations")}</h2>
                 <p>{t("destinationsDesc")}</p>
               </div>
-              <Link to="/destinations">{t("viewAll")}</Link>
             </div>
           </div>
 

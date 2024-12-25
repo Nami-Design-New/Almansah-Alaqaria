@@ -114,6 +114,8 @@
   "needToKnow": "Things to know",
   "needToKnowDesc": "You will be in a private home, so please take care of yourself and your family.",
   "addDate": "Add Date",
+  "viewOnMap": "View Map",
+  "viewListing": "View Listing",
   "page_not_found": {
     "title": "Oops! 404",
     "description": "We can't seem to find the page you're looking for.",

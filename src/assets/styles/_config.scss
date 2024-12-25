@@ -580,6 +580,10 @@ input[type="email"] {
   background: var(--white);
 }
 
+.rmdp-wrapper {
+  background: var(--white) !important;
+}
+
 .rmdp-day {
   width: 52px !important;
   height: 52px !important;
@@ -668,5 +672,5 @@ input[type="email"] {
 }
 
 .rmdp-week-day {
-  width: 52px;
+  width: 52px !important;
 }
