@@ -14,7 +14,7 @@ export default function Properties() {
                 <h2>{t("propertiesTitle")}</h2>
                 <p>{t("propertiesDesc")}</p>
               </div>
-              <Link to="/destinations">{t("viewAll")}</Link>
+              <Link to="/properties">{t("viewAll")}</Link>
             </div>
           </div>
           {Array(8)

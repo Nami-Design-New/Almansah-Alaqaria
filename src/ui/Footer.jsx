@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          
+
           <div className="col-lg-3 col-md-6 col-12 p-2">
             <div className="col">
               <h5>{t("support")}</h5>
@@ -71,9 +71,11 @@ export default function Footer() {
             <div className="col">
               <h5>{t("categories")}</h5>
               <div className="links">
-                <Link to="/daily-rent">{t("dailyRent")}</Link>
+                <Link to="/properties">{t("dailyRent")}</Link>
                 <Link to="/properties-for-sale">{t("propertiesForSale")}</Link>
-                <Link to="/real-estate-projects">{t("realEstateProjects")}</Link>
+                <Link to="/real-estate-projects">
+                  {t("realEstateProjects")}
+                </Link>
                 <Link to="/wanted-for-purchase">{t("wantedForPurchase")}</Link>
               </div>
             </div>

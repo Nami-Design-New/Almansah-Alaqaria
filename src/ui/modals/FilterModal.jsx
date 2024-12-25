@@ -140,28 +140,28 @@ export default function FilterModal({ showModal, setShowModal }) {
               <label className="checkbox_field" htmlFor="1">
                 <input type="checkbox" id="1" />
                 <div>
-                  <img src="/icons/star.svg" alt="star" />
+                  <img src="/icons/star-filled.svg" alt="star" />
                   <span>{t("oneOrMore")}</span>
                 </div>
               </label>
               <label className="checkbox_field" htmlFor="2">
                 <input type="checkbox" id="2" />
                 <div>
-                  <img src="/icons/star.svg" alt="star" />
+                  <img src="/icons/star-filled.svg" alt="star" />
                   <span>{t("twoOrMore")}</span>
                 </div>
               </label>
               <label className="checkbox_field" htmlFor="3">
                 <input type="checkbox" id="3" />
                 <div>
-                  <img src="/icons/star.svg" alt="star" />
+                  <img src="/icons/star-filled.svg" alt="star" />
                   <span>{t("threeOrMore")}</span>
                 </div>
               </label>
               <label className="checkbox_field" htmlFor="4">
                 <input type="checkbox" id="4" />
                 <div>
-                  <img src="/icons/star.svg" alt="star" />
+                  <img src="/icons/star-filled.svg" alt="star" />
                   <span>{t("fourOrMore")}</span>
                 </div>
               </label>

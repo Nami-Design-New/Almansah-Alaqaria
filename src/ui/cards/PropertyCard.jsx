@@ -12,7 +12,7 @@ export default function PropertyCard() {
   const { lang } = useSelector((state) => state.language);
 
   return (
-    <Link to="properties/1" className="unit_card">
+    <Link to="/properties/1" className="unit_card">
       <div className="images">
         <Swiper
           slidesPerView={1}
@@ -44,23 +44,25 @@ export default function PropertyCard() {
       </div>
       <div className="content">
         <div className="head_rate">
-          <h5>فيلا في جدة</h5>
+          <h5>Villa in Jeddah</h5>
           <button>
-            <img src="/icons/star.svg" alt="star" />
+            <img src="/icons/star-filled.svg" alt="star" />
             4.98 (198)
           </button>
         </div>
-        <p>فيلا مطلة على البحر مع حديقة خاصة</p>
+        <p>Sea view villa with private garden</p>
         <div className="features">
           <div className="feature">
             <img src="/icons/size.svg" className="to_dark" alt="size" />
-            75 م
+            75 m<sup>2</sup>
           </div>
           <div className="feature">
-            <img src="/icons/beds.svg" className="to_dark" alt="size" />2 غرفة
+            <img src="/icons/beds.svg" className="to_dark" alt="size" />2
+            bedroom
           </div>
           <div className="feature">
-            <img src="/icons/baths.svg" className="to_dark" alt="size" />1 مرحاض
+            <img src="/icons/baths.svg" className="to_dark" alt="size" />1
+            bathroom
           </div>
         </div>
         <h6 className="price">

@@ -73,6 +73,10 @@ header {
         border-radius: 50%;
         color: var(--main);
         border: 0;
+        &:active {
+          background: var(--btn-bg);
+          color: var(--main);
+        }
         &.show {
           background: var(--btn-bg);
         }

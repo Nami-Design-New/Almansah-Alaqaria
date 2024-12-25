@@ -27,7 +27,7 @@ export default function Header() {
         <div className="nav_links">
           <NavLink to="/">{t("home")}</NavLink>
           <NavLink to="/about">{t("about")}</NavLink>
-          <NavLink to="/ads">{t("ads")}</NavLink>
+          <NavLink to="/properties">{t("properties")}</NavLink>
           <NavLink to="/add-ad">{t("add_ad")}</NavLink>
           <NavLink to="/contact">{t("contact")}</NavLink>
         </div>

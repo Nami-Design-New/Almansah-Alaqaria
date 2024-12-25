@@ -1,0 +1,99 @@
+.properties {
+  padding: 40px 0;
+  background: var(--btn-bg);
+  position: relative;
+}
+
+.view_map {
+  left: 50%;
+  bottom: 32px;
+  position: fixed;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px;
+  padding-inline-end: 18px;
+  border-radius: 90px;
+  background: var(--main);
+  color: var(--white);
+  font-size: 16px;
+  z-index: 999;
+  .icon {
+    background: var(--white);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    @include centerFlex();
+    img {
+      height: 16px;
+    }
+  }
+}
+
+.top_filter {
+  padding: 24px 0;
+  .filter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .date_btn {
+      color: var(--main);
+      direction: rtl;
+      height: 52px;
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 8px 12px;
+      border-radius: 12px;
+      background: var(--input-bg);
+      border: 1px solid var(--input-stroke);
+      font-size: 14px;
+      box-shadow: none !important;
+    }
+    .filter_btn {
+      height: 52px;
+      min-width: 52px;
+      border-radius: 12px;
+      border: 1px solid var(--input-stroke);
+      @include centerFlex();
+    }
+  }
+}
+
+.map_section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  .control-btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .control-btn:hover {
+    background-color: #f0f0f0;
+  }
+
+  .map {
+    height: 100%;
+  }
+}
+
+.map-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
