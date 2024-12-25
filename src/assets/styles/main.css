@@ -534,6 +534,134 @@ input[type=email] {
   direction: ltr !important;
 }
 
+.stars_rate {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.stars_rate .stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.stars_rate .stars span {
+  color: var(--gray);
+  font-size: 16px;
+  margin: 0;
+}
+.stars_rate .stars img {
+  height: 14px;
+}
+
+.calender_modal p {
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.calender_modal .rmdp-calendar {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 8px;
+  background: var(--white);
+}
+
+.rmdp-day {
+  width: 52px !important;
+  height: 52px !important;
+  font-size: 16px !important;
+  color: var(--main) !important;
+  transition: var(--transition);
+}
+.rmdp-day span:hover {
+  background-color: var(--close-hover) !important;
+  color: var(--main) !important;
+}
+.rmdp-day.rmdp-today span {
+  background-color: var(--main) !important;
+  color: var(--white) !important;
+}
+.rmdp-day.rmdp-disabled {
+  color: var(--gray) !important;
+  cursor: not-allowed !important;
+}
+.rmdp-day.rmdp-disabled span {
+  text-decoration: line-through !important;
+  cursor: not-allowed !important;
+}
+.rmdp-day.rmdp-disabled span:hover {
+  background-color: transparent !important;
+  color: var(--gray) !important;
+}
+
+.rmdp-arrow-container {
+  width: 24px !important;
+  height: 24px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.rmdp-arrow-container i {
+  display: none;
+}
+.rmdp-arrow-container::before {
+  font-family: "Font Awesome 6 Pro";
+  content: "\f104";
+  font-size: 14px;
+  color: var(--main);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rmdp-arrow-container.rmdp-right::before {
+  content: "\f105";
+}
+.rmdp-arrow-container:hover {
+  background: var(--close-hover) !important;
+  box-shadow: none !important;
+}
+.rmdp-arrow-container.disabled {
+  cursor: not-allowed !important;
+}
+.rmdp-arrow-container.disabled::before {
+  color: var(--gray) !important;
+}
+.rmdp-arrow-container.disabled:hover {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.rmdp-range {
+  background: var(--main) !important;
+  box-shadow: none !important;
+  color: var(--white) !important;
+}
+
+.rmdp-week:first-child {
+  margin-bottom: 16px;
+}
+.rmdp-week:first-child .rmdp-week-day {
+  color: var(--main) !important;
+}
+
+.rmdp-header-values {
+  color: var(--main) !important;
+}
+
+.rmdp-shadow {
+  box-shadow: none !important;
+}
+
+.calender_wrapper {
+  min-height: 384px;
+}
+
+.rmdp-week-day {
+  width: 52px;
+}
+
 header {
   padding: 16px 0;
   position: sticky;
@@ -870,6 +998,42 @@ footer .copy_rights .links a:hover {
 }
 .unit_card:hover .images .swiper-pagination {
   opacity: 1;
+}
+
+.rate_card {
+  width: 100%;
+  gap: 16px;
+  padding: 16px;
+  display: flex;
+  border-radius: 16px;
+  flex-direction: column;
+  border: 1px solid var(--input-stroke);
+}
+.rate_card .user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.rate_card .user .icon img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rate_card .user .info h6 {
+  color: var(--main);
+  font-size: 16px;
+}
+.rate_card .user .info span {
+  color: var(--gray);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.rate_card .comment p {
+  margin: 0;
 }
 
 .form_field {
@@ -1742,13 +1906,13 @@ body .property_details .about_place .line {
   display: block;
   background-color: var(--input-stroke);
 }
-body .property_details .about_place ul {
+body .property_details .about_place .features ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 24px;
 }
-body .property_details .about_place ul li {
+body .property_details .about_place .features ul li {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1757,6 +1921,39 @@ body .property_details .about_place ul li {
   font-size: 14px;
   color: var(--main);
   background: var(--close-hover);
+}
+body .property_details .about_place .innersection h3 {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+body .property_details .about_place .innersection p {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+body .property_details .about_place .innersection .calender_wrapper {
+  width: 100%;
+}
+body .property_details .about_place .innersection .calender_wrapper .rmdp-calendar {
+  border-radius: 12px;
+  padding: 24px 32px;
+  border: 1px solid var(--input-stroke);
+}
+body .property_details .about_place .innersection .policies {
+  margin-top: 24px;
+}
+body .property_details .about_place .innersection .policies h6 {
+  color: var(--main);
+  margin-bottom: 16px;
+}
+body .property_details .about_place .innersection .policies strong {
+  color: var(--main);
+}
+body .property_details .about_place .innersection .policies ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--gray);
 }
 body .property_details .reservation_holder {
   border-radius: 16px;
@@ -1805,13 +2002,14 @@ body .property_details .reservation_holder .box .recipt ul li {
 }
 body .property_details .reservation_holder .box .recipt ul li div {
   color: var(--main);
+  font-size: 14px;
 }
 body .property_details .reservation_holder .box .recipt ul li h6 {
   color: var(--main);
   font-size: 16px;
 }
 body .property_details .reservation_holder .box .recipt ul li span {
-  color: var(--second);
+  color: var(--main);
   font-weight: 600;
   font-size: 16px;
 }
@@ -1822,6 +2020,7 @@ body .property_details .reservation_holder .box .total {
 }
 body .property_details .reservation_holder .box .total div {
   color: var(--main);
+  font-size: 14px;
 }
 body .property_details .reservation_holder .box .total h6 {
   color: var(--main);

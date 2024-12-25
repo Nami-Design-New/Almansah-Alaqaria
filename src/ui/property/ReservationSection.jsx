@@ -1,8 +1,12 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import SubmitBtn from "./../form/SubmitBtn";
+import DateCalender from "../modals/DateCalender";
 
 export default function ReservationSection() {
   const { t } = useTranslation();
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="col-lg-4 col-12 p-2">
       <div className="reservation_holder">
@@ -15,19 +19,21 @@ export default function ReservationSection() {
             {t("sar")}
           </h6>
         </div>
+
         <div className="box">
           <div className="check_in_out">
-            <div className="button">
+            <div className="button" onClick={() => setShowModal(true)}>
               <h5>{t("checkIn")}</h5>
-              <h6>12/12/2021</h6>
+              <h6>{t("addDate")}</h6>
             </div>
-            <div className="button">
+            <div className="button" onClick={() => setShowModal(true)}>
               <h5>{t("checkOut")}</h5>
-              <h6>15/12/2021</h6>
+              <h6>{t("addDate")}</h6>
             </div>
           </div>
           <SubmitBtn text={t("reserveNow")} className="w-100" />
         </div>
+
         <div className="box">
           <div className="arrival_departure">
             <div>
@@ -40,6 +46,7 @@ export default function ReservationSection() {
             </div>
           </div>
         </div>
+
         <div className="box">
           <div className="recipt">
             <ul>
@@ -69,6 +76,7 @@ export default function ReservationSection() {
             </ul>
           </div>
         </div>
+
         <div className="box">
           <div className="total">
             <h6>{t("totalPrice")}</h6>
@@ -78,6 +86,8 @@ export default function ReservationSection() {
           </div>
         </div>
       </div>
+
+      <DateCalender showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
 }

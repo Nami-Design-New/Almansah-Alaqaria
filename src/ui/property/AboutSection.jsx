@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { Calendar } from "react-multi-date-picker";
 
 export default function AboutSection() {
   const { t } = useTranslation();
+
   return (
     <div className="col-lg-8 col-12 p-2">
       <div className="about_place">
@@ -13,7 +15,7 @@ export default function AboutSection() {
             <div className="title">
               <h6>Hosted by George</h6>
               <span>
-                <img src="/icons/star.svg" alt="star" />
+                <img src="/icons/star-filled.svg" alt="star" />
                 4.98 (198)
               </span>
             </div>
@@ -38,6 +40,7 @@ export default function AboutSection() {
           Registration number
           <br /> 00002670423
         </p>
+
         <span className="line" />
 
         <div className="features">
@@ -66,6 +69,52 @@ export default function AboutSection() {
             <li>Iron</li>
             <li>Ironing board</li>
           </ul>
+        </div>
+
+        <span className="line" />
+
+        <div className="innersection">
+          <h3>{t("selectCheckInDate")}</h3>
+          <p className="desc">{t("minimumStay")}: 3 nights</p>
+          <div className="calender_wrapper">
+            <Calendar range numberOfMonths={2} minDate={new Date()} />
+          </div>
+        </div>
+
+        <span className="line" />
+
+        <div className="innersection">
+          <h3>{t("needToKnow")}</h3>
+          <p className="desc">{t("needToKnowDesc")}</p>
+          
+          <div className="policies">
+            <h6>{t("cancellationPolicy")}</h6>
+            <p>
+              <strong>
+                Ensure that the policy imposed by this host suits your
+                circumstances.
+              </strong>
+              In rare cases, you may be eligible for a refund outside the scope
+              of this policy.
+            </p>
+            <ul>
+              <li>
+                Get <strong>100%</strong> of your payment back within 48 hours
+                of booking.
+              </li>
+              <li>
+                Get <strong>50%</strong> of your payment back if canceled 72
+                hours before arrival.
+              </li>
+              <li>
+                Get <strong>25%</strong> of your payment back if canceled 24
+                hours before arrival.
+              </li>
+              <li>
+                The cleaning fee is refunded if you cancel before check-in.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

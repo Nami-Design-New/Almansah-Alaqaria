@@ -23,6 +23,9 @@ export default function PropertyDetails() {
               </button>
             </div>
           </div>
+          <div className="details">
+
+          </div>
         </div>
 
         <GallerySection />

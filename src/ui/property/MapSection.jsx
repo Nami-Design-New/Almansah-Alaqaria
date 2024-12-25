@@ -28,7 +28,7 @@ export default function MapSection() {
               center={position}
               mapContainerStyle={{ width: "100%", height: "100%" }}
             >
-              <Marker icon="/public/icons/mapMarker.svg" position={position} />
+              <Marker icon="/icons/mapMarker.svg" position={position} />
             </GoogleMap>
           ) : (
             <div className="map_loader">

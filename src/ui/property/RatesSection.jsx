@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSelector } from "react-redux";
 import "swiper/css";
+import RateCard from "../cards/RateCard";
 
 export default function RatesSection() {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export default function RatesSection() {
         <h3>{t("ratesTitle")}</h3>
         <p>{t("ratesDesc")}</p>
         <Swiper
-          slidesPerView={4}
+          slidesPerView={3}
           speed={1000}
           loop={true}
           spaceBetween={16}
@@ -32,19 +33,22 @@ export default function RatesSection() {
             768: {
               slidesPerView: 3,
             },
-            1024: {
-              slidesPerView: 4,
-            },
-            1400: {
-              slidesPerView: 5,
-            },
-            1600: {
-              slidesPerView: 6,
-            },
           }}
         >
           <SwiperSlide>
-            
+            <RateCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <RateCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <RateCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <RateCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <RateCard />
           </SwiperSlide>
         </Swiper>
       </div>

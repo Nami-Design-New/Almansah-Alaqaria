@@ -159,7 +159,7 @@
       background-color: var(--input-stroke);
     }
 
-    ul {
+    .features ul {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -173,6 +173,42 @@
         font-size: 14px;
         color: var(--main);
         background: var(--close-hover);
+      }
+    }
+
+    .innersection {
+      h3 {
+        margin-bottom: 8px;
+        font-size: 20px;
+      }
+      p {
+        margin-bottom: 16px;
+        font-size: 14px;
+      }
+      .calender_wrapper {
+        width: 100%;
+        .rmdp-calendar {
+          border-radius: 12px;
+          padding: 24px 32px;
+          border: 1px solid var(--input-stroke);
+        }
+      }
+      .policies {
+        margin-top: 24px;
+        h6 {
+          color: var(--main);
+          margin-bottom: 16px;
+        }
+        strong {
+          color: var(--main);
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          font-size: 14px;
+          color: var(--gray);
+        }
       }
     }
   }
@@ -217,13 +253,14 @@
             @include space-between();
             div {
               color: var(--main);
+              font-size: 14px;
             }
             h6 {
               color: var(--main);
               font-size: 16px;
             }
             span {
-              color: var(--second);
+              color: var(--main);
               font-weight: 600;
               font-size: 16px;
             }
@@ -234,6 +271,7 @@
         @include space-between();
         div {
           color: var(--main);
+          font-size: 14px;
         }
         h6 {
           color: var(--main);
