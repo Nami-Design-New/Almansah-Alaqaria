@@ -1,6 +1,6 @@
-import { GoogleMap, useLoadScript, Circle } from "@react-google-maps/api";
+import { useState, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 export default function MapSection({ setViewMap }) {
   const { t } = useTranslation();
@@ -17,7 +17,12 @@ export default function MapSection({ setViewMap }) {
   const handleZoomIn = () => setZoom((prev) => Math.min(prev + 1, 21));
   const handleZoomOut = () => setZoom((prev) => Math.max(prev - 1, 0));
 
-  const handleDetectLocation = () => {
+  const handleDetectLocation = useCallback(() => {
+    if (!isLoaded) {
+      alert("Google Maps API is not loaded yet.");
+      return;
+    }
+
     navigator.geolocation.getCurrentPosition(
       ({ coords }) => {
         const position = { lat: coords.latitude, lng: coords.longitude };
@@ -29,7 +34,7 @@ export default function MapSection({ setViewMap }) {
       },
       () => alert("Unable to retrieve your location.")
     );
-  };
+  }, [isLoaded, map]);
 
   return (
     <section className="map_section">
@@ -50,19 +55,23 @@ export default function MapSection({ setViewMap }) {
               mapContainerStyle={{ width: "100%", height: "100%" }}
             >
               {userLocation && (
-                <Circle
-                  center={userLocation}
-                  radius={100}
-                  options={{
-                    strokeColor: "#FF0000",
-                    strokeOpacity: 0.8,
+                <Marker
+                  position={userLocation}
+                  icon={{
+                    path: window.google.maps.SymbolPath.CIRCLE,
+                    scale: 10,
+                    fillColor: "#4285F4",
+                    fillOpacity: 1,
                     strokeWeight: 2,
-                    fillColor: "#FF0000",
-                    fillOpacity: 0.35,
+                    strokeColor: "white",
+                    strokeOpacity: 1,
                   }}
                 />
               )}
+
+              
             </GoogleMap>
+
             <div className="map-controls">
               <button className="control-btn" onClick={handleDetectLocation}>
                 <i className="fa-solid fa-location-arrow"></i>
