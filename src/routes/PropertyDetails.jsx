@@ -32,13 +32,13 @@ export default function PropertyDetails({ isHost }) {
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <Dropdown.Item>
-                      <img src="/public/icons/hide.svg" alt="hide" /> {t("hide")}
+                      <img src="/icons/hide.svg" alt="hide" /> {t("hide")}
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <img src="/public/icons/edit.svg" alt="hide" /> {t("edit")}
+                      <img src="/icons/edit.svg" alt="hide" /> {t("edit")}
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <img src="/public/icons/delete.svg" alt="hide" /> {t("delete")}
+                      <img src="/icons/delete.svg" alt="hide" /> {t("delete")}
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

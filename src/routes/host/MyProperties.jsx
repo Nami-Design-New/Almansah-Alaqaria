@@ -16,7 +16,7 @@ export default function MyProperties() {
           <div className="col-lg-4 col-md-6 col-12 p-2">
             <div className="uncompleted_property">
               <div className="img">
-                <img src="/public/images/house-2.jpg" alt="house" />
+                <img src="/images/house-2.jpg" alt="house" />
               </div>
               <div className="info">
                 <span>{t("uncompleted")}</span>
@@ -32,7 +32,7 @@ export default function MyProperties() {
           <div className="col-lg-4 col-md-6 col-12 p-2">
             <div className="uncompleted_property">
               <div className="img">
-                <img src="/public/images/house-3.jpg" alt="house" />
+                <img src="/images/house-3.jpg" alt="house" />
               </div>
               <div className="info">
                 <span className="verify">{t("verifyIdentityToPublish")}</span>
