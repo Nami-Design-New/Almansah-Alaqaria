@@ -203,7 +203,7 @@ input[type="number"] {
   a {
     text-align: start;
     border-radius: 4px;
-    padding: 6px 16px;
+    padding: 6px 12px;
     font-size: 14px;
     color: var(--main);
     display: flex;
@@ -212,6 +212,9 @@ input[type="number"] {
     gap: 8px;
     &:active {
       background: var(--white);
+    }
+    i {
+      width: 18px;
     }
   }
 }
@@ -595,8 +598,8 @@ input[type="email"] {
     color: var(--main) !important;
   }
   &.rmdp-today span {
-    background-color: var(--main) !important;
-    color: var(--white) !important;
+    background-color: var(--close-hover) !important;
+    color: var(--main) !important;
   }
   &.rmdp-disabled {
     color: var(--gray) !important;
@@ -650,6 +653,10 @@ input[type="email"] {
   background: var(--main) !important;
   box-shadow: none !important;
   color: var(--white) !important;
+  &.rmdp-today span {
+    background: var(--main) !important;
+    color: var(--white) !important;
+  }
 }
 
 .rmdp-week:first-child {
