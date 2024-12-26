@@ -15,9 +15,20 @@
         color: var(--main);
         padding: 8px 16px;
         border-radius: 8px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        border: 0;
+        img {
+          height: 16px;
+        }
         &:hover {
           background-color: var(--close-hover);
         }
+      }
+      .dropdown-menu {
+        margin: 0 !important;
       }
     }
   }

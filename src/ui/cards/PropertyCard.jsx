@@ -7,12 +7,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-export default function PropertyCard() {
+export default function PropertyCard({ isHost }) {
   const { t } = useTranslation();
   const { lang } = useSelector((state) => state.language);
 
   return (
-    <Link to="/properties/1" className="unit_card">
+    <Link
+      to={isHost ? "/host/my-listings/1" : "/properties/1"}
+      className="unit_card"
+    >
       <div className="images">
         <Swiper
           slidesPerView={1}

@@ -55,7 +55,7 @@ export const router = createBrowserRouter([
           },
           {
             path: ":id",
-            element: <PropertyDetails />,
+            element: <PropertyDetails isHost={true} />,
           },
         ],
       },

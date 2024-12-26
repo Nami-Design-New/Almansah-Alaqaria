@@ -6,7 +6,7 @@
     margin-bottom: 16px;
     h3 {
       color: var(--main);
-      font-size: 22px;
+      font-size: 20px;
       margin: 0;
     }
     .form {
@@ -17,9 +17,14 @@
         color: var(--main);
       }
       input {
+        font-size: 14px;
         width: 300px;
         color: var(--main);
       }
     }
   }
+}
+
+.add_property {
+  padding: 40px 0;
 }

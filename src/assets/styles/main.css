@@ -1046,6 +1046,59 @@ footer .copy_rights .links a:hover {
   margin: 0;
 }
 
+.uncompleted_property {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 4px;
+}
+.uncompleted_property .img {
+  flex: 1;
+  aspect-ratio: 1/1;
+}
+.uncompleted_property .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.uncompleted_property .info {
+  flex: 2;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.uncompleted_property .info span {
+  font-size: 12px;
+  color: var(--gray);
+}
+.uncompleted_property .info span.verify {
+  color: #ff0000;
+}
+.uncompleted_property .info h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main);
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.uncompleted_property .info button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  background: var(--main);
+  color: var(--white);
+}
+
 .form_field {
   display: flex;
   width: 100%;
@@ -1768,7 +1821,7 @@ body .my_properties .header {
 }
 body .my_properties .header h3 {
   color: var(--main);
-  font-size: 22px;
+  font-size: 20px;
   margin: 0;
 }
 body .my_properties .header .form {
@@ -1780,8 +1833,12 @@ body .my_properties .header .form i {
   color: var(--main);
 }
 body .my_properties .header .form input {
+  font-size: 14px;
   width: 300px;
   color: var(--main);
+}
+body .add_property {
+  padding: 40px 0;
 }
 body .properties {
   padding: 40px 0;
@@ -1951,9 +2008,20 @@ body .property_details .details_header .actions button {
   color: var(--main);
   padding: 8px 16px;
   border-radius: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+}
+body .property_details .details_header .actions button img {
+  height: 16px;
 }
 body .property_details .details_header .actions button:hover {
   background-color: var(--close-hover);
+}
+body .property_details .details_header .actions .dropdown-menu {
+  margin: 0 !important;
 }
 body .property_details .gallery {
   display: grid;

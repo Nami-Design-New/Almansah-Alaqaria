@@ -1,5 +1,7 @@
 export default function ListProperty() {
   return (
-    <div>ListProperty</div>
+    <section className="add_property">
+      
+    </section>
   )
 }
