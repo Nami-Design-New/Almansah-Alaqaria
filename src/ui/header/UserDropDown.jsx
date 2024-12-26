@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 export default function UserDropDown() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  
+
   return (
     <Dropdown>
       <Dropdown.Toggle className="user_btn">

@@ -27,7 +27,6 @@
       transition: var(--transition);
       @include centerFlex();
       opacity: 0;
-      transform: translateY(-50%);
       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
       &::after {
         font-size: 16px;
