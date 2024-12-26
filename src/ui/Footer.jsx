@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { t } = useTranslation();
+  const { lang } = useSelector((state) => state.language);
   const resolvedTheme = useSelector(getResolvedTheme);
 
   return (
@@ -17,7 +18,11 @@ export default function Footer() {
                 <img
                   src={
                     resolvedTheme === "light"
-                      ? "/images/logo.svg"
+                      ? lang === "en"
+                        ? "/images/logo-en.svg"
+                        : "/images/logo.svg"
+                      : lang === "en"
+                      ? "/images/logo-dark-en.svg"
                       : "/images/logo-dark.svg"
                   }
                   alt="logo"

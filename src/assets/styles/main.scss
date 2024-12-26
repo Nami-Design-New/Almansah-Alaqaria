@@ -15,8 +15,9 @@ body {
 
   @import "./home";
   @import "./auth";
-  @import "./property_details";
+  @import "./hosting";
   @import "./properties";
+  @import "./property_details";
 
   &.en {
     direction: ltr;

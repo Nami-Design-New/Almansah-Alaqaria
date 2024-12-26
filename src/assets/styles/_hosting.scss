@@ -1,0 +1,25 @@
+.my_properties {
+  padding: 40px 0;
+  background: var(--btn-bg);
+  .header {
+    @include space-between();
+    margin-bottom: 16px;
+    h3 {
+      color: var(--main);
+      font-size: 22px;
+      margin: 0;
+    }
+    .form {
+      background: var(--close-hover);
+      padding: 12px;
+      border-radius: 12px;
+      i {
+        color: var(--main);
+      }
+      input {
+        width: 300px;
+        color: var(--main);
+      }
+    }
+  }
+}
