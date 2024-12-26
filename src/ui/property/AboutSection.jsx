@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { Calendar } from "react-multi-date-picker";
 
-export default function AboutSection() {
+export default function AboutSection({ isHost }) {
   const { t } = useTranslation();
 
   return (
-    <div className="col-lg-8 col-12 p-2">
+    <div className={isHost ? "col-12 p-2" : "col-lg-8 col-12 p-2"}>
       <div className="about_place">
         <div className="host_card">
           <div className="avatar">
@@ -73,20 +73,24 @@ export default function AboutSection() {
 
         <span className="line" />
 
-        <div className="innersection">
-          <h3>{t("selectCheckInDate")}</h3>
-          <p className="desc">{t("minimumStay")}: 3 nights</p>
-          <div className="calender_wrapper">
-            <Calendar range numberOfMonths={2} minDate={new Date()} />
-          </div>
-        </div>
+        {!isHost && (
+          <>
+            <div className="innersection">
+              <h3>{t("selectCheckInDate")}</h3>
+              <p className="desc">{t("minimumStay")}: 3 nights</p>
+              <div className="calender_wrapper">
+                <Calendar range numberOfMonths={2} minDate={new Date()} />
+              </div>
+            </div>
 
-        <span className="line" />
+            <span className="line" />
+          </>
+        )}
 
         <div className="innersection">
           <h3>{t("needToKnow")}</h3>
           <p className="desc">{t("needToKnowDesc")}</p>
-          
+
           <div className="policies">
             <h6>{t("cancellationPolicy")}</h6>
             <p>

@@ -1,0 +1,148 @@
+.my_properties {
+  padding: 40px 0;
+  background: var(--btn-bg);
+  .header {
+    @include space-between();
+    margin-bottom: 16px;
+    h3 {
+      color: var(--main);
+      font-size: 20px;
+      margin: 0;
+    }
+    .form {
+      background: var(--close-hover);
+      padding: 12px;
+      border-radius: 12px;
+      i {
+        color: var(--main);
+      }
+      input {
+        font-size: 14px;
+        width: 300px;
+        color: var(--main);
+      }
+    }
+  }
+}
+
+.add_property {
+  height: calc(100vh - 73px);
+  display: flex;
+  .banner_holder {
+    position: relative;
+    width: 40%;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+    }
+    .logo {
+      @include centerAbsolute();
+      height: 62px;
+      object-fit: contain;
+      z-index: 1;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .form_holder {
+    width: 60%;
+    padding: 40px 60px;
+    .steps_header {
+      @include space-between();
+      margin-bottom: 24px;
+      h3 {
+        font-size: 20px;
+        margin-bottom: 0;
+        color: var(--main);
+      }
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        p {
+          margin: 0;
+          color: var(--main);
+          span {
+            font-size: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        button {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          border: 1px solid var(--input-stroke);
+          i {
+            color: var(--main);
+          }
+        }
+      }
+    }
+
+    .steps {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      .step {
+        flex: 1;
+        height: 6px;
+        border-radius: 30px;
+        background: var(--btn-bg);
+        &.active {
+          background: var(--main);
+        }
+      }
+    }
+
+    .wizard_wrapper {
+      margin-top: 24px;
+      background: var(--btn-bg);
+      border-radius: 16px;
+      padding: 16px 8px;
+      height: calc(100% - 86px);
+      overflow-y: scroll;
+      scrollbar-width: none;
+      button {
+        width: 100%;
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      input,
+      textarea,
+      select {
+        background: var(--white);
+      }
+      .other_info_title {
+        font-size: 14px;
+        span {
+          color: var(--gray);
+          font-size: 12px;
+        }
+      }
+      .other_info {
+        padding: 8px;
+        border-radius: 12px;
+        background: var(--white);
+        input,
+        textarea,
+        select {
+          background: var(--input-bg);
+        }
+      }
+    }
+  }
+}

@@ -6,8 +6,9 @@ import ThemeDropDown from "./header/ThemeDropDown";
 import LanguageDropDown from "./header/LanguageDropDown";
 import UserDropDown from "./header/UserDropDown";
 
-export default function Header() {
+export default function Header({ isHost = false }) {
   const { t } = useTranslation();
+  const { lang } = useSelector((state) => state.language);
   const resolvedTheme = useSelector(getResolvedTheme);
 
   return (
@@ -17,7 +18,11 @@ export default function Header() {
           <img
             src={
               resolvedTheme === "light"
-                ? "/images/logo.svg"
+                ? lang === "en"
+                  ? "/images/logo-en.svg"
+                  : "/images/logo.svg"
+                : lang === "en"
+                ? "/images/logo-dark-en.svg"
                 : "/images/logo-dark.svg"
             }
             alt="logo"
@@ -25,11 +30,23 @@ export default function Header() {
         </Link>
 
         <div className="nav_links">
-          <NavLink to="/">{t("home")}</NavLink>
-          <NavLink to="/about">{t("about")}</NavLink>
-          <NavLink to="/properties">{t("properties")}</NavLink>
-          <NavLink to="/add-ad">{t("add_ad")}</NavLink>
-          <NavLink to="/contact">{t("contact")}</NavLink>
+          {!isHost && (
+            <>
+              <NavLink to="/">{t("home")}</NavLink>
+              <NavLink to="/about">{t("about")}</NavLink>
+              <NavLink to="/properties">{t("properties")}</NavLink>
+              <NavLink to="/host/list-property">{t("add_ad")}</NavLink>
+              <NavLink to="/contact">{t("contact")}</NavLink>
+            </>
+          )}
+          {isHost && (
+            <>
+              <NavLink to="/host/reservations">{t("reservations")}</NavLink>
+              <NavLink to="/host/my-listings">{t("myProperties")}</NavLink>
+              <NavLink to="/host/list-property">{t("add_ad")}</NavLink>
+              <NavLink to="/host/chats">{t("chats")}</NavLink>
+            </>
+          )}
         </div>
 
         <div className="actions">

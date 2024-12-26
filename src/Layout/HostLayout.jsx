@@ -1,17 +1,15 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../ui/Footer";
 import Header from "../ui/Header";
-import Footer from "./../ui/Footer";
-import AuthModal from "../ui/modals/AuthModal";
 
-export default function RootLayout() {
+export default function HostLayout() {
   return (
     <>
-      <Header />
+      <Header isHost={true} />
       <main>
         <Outlet />
       </main>
       <Footer />
-      <AuthModal />
     </>
   );
 }

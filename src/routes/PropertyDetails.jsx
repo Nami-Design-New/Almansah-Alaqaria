@@ -4,8 +4,9 @@ import GallerySection from "../ui/property/GallerySection";
 import AboutSection from "../ui/property/AboutSection";
 import ReservationSection from "../ui/property/ReservationSection";
 import RatesSection from "../ui/property/RatesSection";
+import { Dropdown } from "react-bootstrap";
 
-export default function PropertyDetails() {
+export default function PropertyDetails({ isHost }) {
   const { t } = useTranslation();
 
   return (
@@ -18,21 +19,40 @@ export default function PropertyDetails() {
               <button>
                 <i className="fa-sharp fa-solid fa-share"></i> {t("share")}
               </button>
-              <button>
-                <i className="fa-sharp fa-light fa-heart"></i> {t("save")}
-              </button>
+              {!isHost && (
+                <button>
+                  <i className="fa-sharp fa-light fa-heart"></i> {t("save")}
+                </button>
+              )}
+              {isHost && (
+                <Dropdown>
+                  <Dropdown.Toggle>
+                    <img className="to_dark" src="/icons/settings.svg" alt="" />
+                    {t("settings")}
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item>
+                      <img src="/icons/hide.svg" alt="hide" /> {t("hide")}
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <img src="/icons/edit.svg" alt="hide" /> {t("edit")}
+                    </Dropdown.Item>
+                    <Dropdown.Item>
+                      <img src="/icons/delete.svg" alt="hide" /> {t("delete")}
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
+              )}
             </div>
           </div>
-          <div className="details">
-
-          </div>
+          <div className="details"></div>
         </div>
 
         <GallerySection />
 
         <div className="row mt-3">
-          <AboutSection />
-          <ReservationSection />
+          <AboutSection isHost={isHost} />
+          {!isHost && <ReservationSection />}
         </div>
 
         <RatesSection />
