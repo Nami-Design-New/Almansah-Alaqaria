@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @keyframes rotate {
   0% {
@@ -1113,7 +1113,7 @@ footer .copy_rights .links a:hover {
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 .form_field label svg,
 .form_field label i {
@@ -1290,7 +1290,7 @@ footer .copy_rights .links a:hover {
 
 body {
   direction: rtl;
-  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-family: "Rubik", serif;
   background-color: var(--white);
 }
 body main {
@@ -1952,6 +1952,7 @@ body .add_property .form_holder .wizard_wrapper select {
 }
 body .add_property .form_holder .wizard_wrapper .other_info_title {
   font-size: 14px;
+  color: var(--main);
 }
 body .add_property .form_holder .wizard_wrapper .other_info_title span {
   color: var(--gray);
